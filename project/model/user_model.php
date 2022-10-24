@@ -7,7 +7,7 @@ class User {
         $this-> set_name($name);
         $this-> set_email_address($email_address);
         $this-> set_password_hash($password_hash);
-        $this->id = $id;
+        $this-> id = $id;
     }
     
     public function get_name() {
