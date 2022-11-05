@@ -4,19 +4,28 @@ try {
     require_once 'controllers/user_controller.php';
     
     echo $database_message;
-
-    $password_hash = password_hash("test", PASSWORD_DEFAULT);
     
-    // create a user !! SUCCESSFUL !!
+    // create a user !! Breanna - SUCCESSFUL !!
+//    $password_hash = password_hash("test", PASSWORD_DEFAULT);
 //    $user = new User("Thumper", "thaycook@gmail.com", $password_hash);
 //    create_users($user);
     
-    //  get all users    
+        // create a user !! Rafi
+//    $password_hash = password_hash("test", PASSWORD_DEFAULT);
+//    $user = new User("rafiTest", "rafiTest@gmail.com", $password_hash);
+//    create_users($user);
+    
+        // create a user !! Kaitlyn
+//    $password_hash = password_hash("test", PASSWORD_DEFAULT);
+//    $user = new User("kaitlynTest", "kaitlynTest@gmail.com", $password_hash);
+//    create_users($user);
+    
+    //  get all users
     $all_users = get_all_users();
     
-    // get user by email address
-    $email_address = "bmhaycook@gmail.com";
-    $one_user_email = get_user_by_email($email_address);
+//    // get user by email address
+//    $email_address = "bmhaycook@gmail.com";
+//    $one_user_email = get_user_by_email($email_address);
 
     
 } catch (Exception $e) {
@@ -33,7 +42,7 @@ try {
         <title></title>
     </head>
     <body>
-        <h2>All Users Table</h2>
+        <h2>Test</h2>
         <table>
             <tr>
                 <th>Name</th>

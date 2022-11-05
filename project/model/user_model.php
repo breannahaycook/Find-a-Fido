@@ -70,7 +70,7 @@ function get_user_by_email($email_address) {
     global $database;
     
     // read one user info
-    $users_query = 'SELECT name, id, FROM users WHERE email_address = :email_address';
+    $users_query = 'SELECT name, id FROM users WHERE email_address = :email_address';
     $users_statement = $database->prepare($users_query);
     $users_statement->bindValue(":email_address", $email_address);
     $users_statement->execute();
