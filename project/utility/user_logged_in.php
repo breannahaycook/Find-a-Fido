@@ -1,7 +1,13 @@
 <?php
 
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
+require_once 'controller/user_controller.php';
+
+// start user session
+session_start();
+
+if(!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] == false){
+    header("Location: .");
+} else {
+
+}
 
