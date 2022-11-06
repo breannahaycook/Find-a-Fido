@@ -41,13 +41,17 @@ class User {
     public function set_password_hash($password_hash) {
         $this-> password_hash = $password_hash;
     }
+    
+    public function set_id($id){
+        $this-> id = $id;
+    }
 }
 
 function get_all_users() {
     global $database;
     
     // read users info
-    $users_query = 'SELECT name, email_address, id FROM users';
+    $users_query = 'SELECT name, email_address, password_hash, id FROM users';
     $users_statement = $database->prepare($users_query);
     $users_statement->execute();
     $users = $users_statement->fetchAll();
@@ -56,7 +60,7 @@ function get_all_users() {
     $users_array = array();
     
     foreach($users as $user) {
-        $users_array[] = new User($user['name'], $user['email_address'], $user['id']);
+        $users_array[] = new User($user['name'], $user['email_address'], $user['password_hash'], $user['id']);
     }
     
     return $users_array;
