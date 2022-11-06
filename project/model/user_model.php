@@ -41,10 +41,6 @@ class User {
     public function set_password_hash($password_hash) {
         $this-> password_hash = $password_hash;
     }
-
-    public function set_id($id){
-        $this-> id = $id;
-    }
 }
 
 function get_all_users() {
