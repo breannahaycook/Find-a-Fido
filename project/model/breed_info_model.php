@@ -150,4 +150,3 @@ function get_breed_by_name($breed) {
     
     return $breeds;
 }
-wfasfasfasfasf
