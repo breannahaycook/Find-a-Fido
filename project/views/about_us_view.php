@@ -11,7 +11,6 @@
         .gridContainer{
             display: grid;
             grid: 500px 500px 500px 500px / auto auto;
-   
             gap: 70px;
             padding: 100px;
             justify-content: center;
@@ -19,7 +18,13 @@
 
         
         .imageItem{
-    
+            background-image: url("../utility/assets/Dooberman.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 50px;
+            width: 500px;
+            height: 500px;
+            
         }
         
         h1{
@@ -55,13 +60,6 @@
             text-shadow: 0px 3px 2px rgb(201, 201, 201);
         }
 
-
-        .profilePic{
-            border-radius: 50px;
-            width: 500px;
-            height: 500px
-        }
-
         hr{
             width: 75%;
         }
@@ -78,6 +76,30 @@
             font-size: 60px;
         }
 
+        
+        .prev, .next {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+        .next {
+            float: right;
+            right: 0px;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
     </style>
 </head>
 <body>
@@ -87,7 +109,11 @@
     <hr>
     <div class="gridContainer">
         <!--Breanna-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Dooberman.jpg"></div>
+        <div id="bh" class="imageItem">
+            <a class="prev" onclick="nextImage(-1, 'bh', bh)">&#10094;</a>
+            <a class="next" onclick="nextImage(1, 'bh', bh)">&#10095;</a>
+        </div>
+        
         <div class="bioItem">
             <h2 class="aboutUsName">Breanna Haycook</h2>
             <p class="bio">
@@ -98,9 +124,13 @@
             id est laborum.
             </p>
         </div>
+        
 
         <!--Kaitlyn Howell-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Husky.jpg"></div>
+        <div class="imageItem">
+            <a class="prev" onclick="">&#10094;</a>
+            <a class="next" onclick="">&#10095;</a>
+        </div>
         <div class="bioItem">
             <h1 class="aboutUsName">Kaitlyn Howell</h1>
             <p class="bio">
@@ -113,7 +143,10 @@
         </div>
 
         <!--Rafiul Hassan-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Goldenretreiver.jpg"></div>
+        <div class="imageItem">
+            <a class="prev" onclick="">&#10094;</a>
+            <a class="next" onclick="">&#10095;</a>
+        </div>
         <div class="bioItem">
             <h2 class="aboutUsName">Rafiul Hassan</h2>
             <p class="bio">
@@ -126,7 +159,10 @@
         </div>
 
         <!--Tahreem Bhatti-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/french_bulldog.jpg"></div>
+        <div class="imageItem">
+            <a class="prev" onclick="">&#10094;</a>
+            <a class="next" onclick="">&#10095;</a>
+        </div>
         <div class="bioItem">
             <h2 class="aboutUsName">Tahreem Bhatti</h2>
             <p class="bio">
@@ -139,5 +175,24 @@
         </div>
 
     </div>
+    <script>
+        //works best if everyone has the same amount of images
+        //will need to alter code if various numbers
+        let bh0 = "url(../utility/assets/Dooberman.jpg)";
+        let bh1 = "url(../utility/assets/Husky.jpg";
+        let bh2 = "url(../utility/assets/Bolognese.jpg";
+        const bh = [bh0, bh1, bh2, 0];
+        
+        function nextImage(num, name, array){
+            array[3] = array[3] + num;
+            if (array[3] > 2){
+                array[3] = 0;
+            }else if (array[3] < 0){
+                array[3] = 2;
+            }
+            document.getElementById(name).style.backgroundImage=array[array[3]];          
+        }
+    </script>
+    
 </body>
 </html>
