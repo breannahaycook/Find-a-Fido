@@ -120,18 +120,27 @@
 </head>
 <body>
     <div class="loginContainer">
-        <section>
+        <section class="createAccount">
             <h1>Login</h1>
-            <form>
+            <?php 
+                // will display error message if unable to login
+                if (isset($message) && $message != " ") {
+                    echo $message; 
+                }
+            ?>
+            <br>
+            <form action="../controllers/login_controller.php" method="post">
                 <label class="emailAlign" for="email">Email:</label><br>
-                <input class="it" type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                <input class="it" type="text" id="email" name="email" placeholder="Enter your email" required><br>
 
                 <label class="passwordAlign" for="password">Password:</label><br>
                 <input class="it" type="password" id="password" name="password" placeholder="Enter your password" required><br>
-
+                
+                <input type="hidden" name="action" value="login">
                 <input class="button" type="submit" value="Login">
             </form>
-            <p>Don't have an account? <a href="signup_view.php">Sign up!</a></p>
+            <p>Don't have an account? <a href="../views/signup_view.php">Sign up!</a></p>
+
         </section>
     </div>
 </body>

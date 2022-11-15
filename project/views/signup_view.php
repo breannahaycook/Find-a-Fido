@@ -125,7 +125,13 @@
     <div class="loginContainer">
         <section class="createAccount">
             <h1>Create Account</h1>
-            <form>
+            <?php 
+                // will display error message if unable to create account
+                if (isset($message) && $message != " ") {
+                    echo $message; 
+                }
+            ?>
+            <form action="../controllers/signup_controller.php" method="post">
                 <label class="nameAlign" for="name">Name:</label><br>
                 <input class="it" type="text" id="name" name="name" placeholder="Enter your name" required><br>
                 
@@ -135,9 +141,10 @@
                 <label class="passwordAlign" for="password">Password:</label><br>
                 <input class="it" type="password" id="password" name="password" placeholder="Enter your password" required><br>
                 
+                <input type="hidden" name="action" value="create_account">
                 <input class="button" type="submit" value="Submit">
             </form>
-            <p>Already have an account? <a href="login_view.php">Login!</a></p>
+            <p>Already have an account? <a href="../views/login_view.php">Login!</a></p>
         </section>
     </div>
 </body>
