@@ -118,7 +118,7 @@ function get_all_breeds() {
     
     // read breeds info
     $breeds_query = 'SELECT breed, size, training_level, hypoallergenic, activity_level, 
-            noise_level, kids_temp, grooming, household_size, shedding, information, id FROM breed_info';
+            noise_level, kids_temp, grooming, household_size, shedding, information, id FROM breed_info ORDER BY breed ASC';
     $breeds_statement = $database->prepare($breeds_query);
     $breeds_statement->execute();
     $breeds = $breeds_statement->fetchAll();
@@ -149,4 +149,19 @@ function get_breed_by_name($breed) {
     $breeds_statement->closeCursor();
     
     return $breeds;
+}
+
+function filter_breeds($filter) {
+    global $database;
+
+    $breeds_query = 'SELECT breed, size, training_level, hypoallergenic, activity_level, noise_level, kids_temp, grooming, household_size, shedding, information, id FROM breed_info' . $filter . ' ORDER BY breed ASC';
+    
+    $breeds_statement = $database->prepare($breeds_query);
+    $breeds_statement->execute();
+    $breeds = $breeds_statement->fetchAll();
+    $breeds_statement->closeCursor();
+    $breeds_array = array();
+    foreach($breeds as $breed) {
+        $breeds_array[] = new Breed($breed['breed'], $breed['size'], $breed['training_level'], $breed['hypoallergenic'], $breed['activity_level'], $breed['noise_level'], $breed['kids_temp'], $breed['grooming'], $breed['household_size'], $breed['shedding'], $breed['information'], $breed['id']);
+    } return $breeds_array;
 }

@@ -86,8 +86,8 @@
         best suits their lifestyle. <br> Meet our developers and their own furry friends below!</p>
     <hr>
     <div class="gridContainer">
-        <!--Breanna-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Dooberman.jpg"></div>
+        <!-- Breanna Haycook -->
+        <div class="imageItem"><img class="profilePic" src="../utility/assets/Doberman_old.jpg"></div>
         <div class="bioItem">
             <h2 class="aboutUsName">Breanna Haycook</h2>
             <p class="bio">
@@ -100,7 +100,7 @@
         </div>
 
         <!--Kaitlyn Howell-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Husky.jpg"></div>
+        <div class="imageItem"><img class="profilePic" src="../utility/assets/Husky_old.jpg"></div>
         <div class="bioItem">
             <h1 class="aboutUsName">Kaitlyn Howell</h1>
             <p class="bio">
@@ -113,7 +113,7 @@
         </div>
 
         <!--Rafiul Hassan-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/Goldenretreiver.jpg"></div>
+        <div class="imageItem"><img class="profilePic" src="../utility/assets/Golden Retreiver.jpg"></div>
         <div class="bioItem">
             <h2 class="aboutUsName">Rafiul Hassan</h2>
             <p class="bio">
@@ -126,7 +126,7 @@
         </div>
 
         <!--Tahreem Bhatti-->
-        <div class="imageItem"><img class="profilePic" src="../utility/assets/french_bulldog.jpg"></div>
+        <div class="imageItem"><img class="profilePic" src="../utility/assets/French Bulldog.jpg"></div>
         <div class="bioItem">
             <h2 class="aboutUsName">Tahreem Bhatti</h2>
             <p class="bio">
