@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="boneBackground">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -280,10 +280,12 @@
     label {
         font-size: 15px;
     }
+    
+    .boneBackground{
+        background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
+    }
 
     main {
-        background: url("../utility/assets/whiteBonePawPrintsBG.jpg");
-        background-color: #B9DEE7;
         margin-left: 250px;
     }
 
@@ -310,8 +312,9 @@
         border-radius: 70px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
         font-family: 'Roboto', sans-serif;
-        height: 60vh;
+        height: 60%;
         width: 70vw;
+        min-width: 600px;
     }
 
     .sidenav {
