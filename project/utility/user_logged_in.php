@@ -1,6 +1,4 @@
 <?php
-
-
 // start user session
 session_start();
 
