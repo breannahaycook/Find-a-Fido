@@ -27,12 +27,12 @@ try {
                 
                 // if login was successful set $_SESSION variables
                 $_SESSION['logged_in'] = true;
-                
-                $user_info = get_user_by_email($email_address);
-                $_SESSION['email_address'] = $email_address;
+
+                $user_info = get_user_by_email($email);
+                $_SESSION['email_address'] = $email;
                 $_SESSION['name'] = $user_info[0];
                 $_SESSION['id'] = $user_info[1];
-                
+
                 // return to home page
                 header("Location: ../views/home_view.php");
             } else {

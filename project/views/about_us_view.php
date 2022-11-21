@@ -103,6 +103,9 @@
     </style>
 </head>
 <body>
+    <?php 
+        include('../views/nav.php');
+    ?>
     <h1 class="aboutUsTitle">About Us</h1>
     <p class="aboutUsBio">Our goal as Team Fido’s Friends is to help aspiring dog owners find the dog breed that
         best suits their lifestyle. <br> Meet our developers and their own furry friends below!</p>

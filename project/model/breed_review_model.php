@@ -71,10 +71,16 @@ function get_breed_reviews_by_name($breed) {
     $reviews_statement = $database->prepare($reviews_query);
     $reviews_statement->bindValue(":breed", $breed);
     $reviews_statement->execute();
-    $reviews = $reviews_statement->fetch();
+    $reviews = $reviews_statement->fetchAll();
     $reviews_statement->closeCursor();
     
-    return $reviews;
+    $reviews_array = array();
+    
+    foreach($reviews as $review) {
+        $reviews_array[] = new Review($review['user_id'], $review['review'], $review['timestamp'], $review['id']);
+    }
+    
+    return $reviews_array;
 }
 
 function get_breed_reviews_by_user_id($user_id) {
