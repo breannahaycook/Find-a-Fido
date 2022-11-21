@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-
 <body>
-    <nav>
-        <label>
+    <header class="header">
+        <div class="nav__label">
             <img class="nav__logo" src="./assets/Logo_Icon.png" alt="Company Logo!">
+            <h1 class="head">Find-A-<span class="head_f">Fido!</span></h1>  
+        </div>
+        <nav class="nav__bar">    
+            <ul class="nav__items">
+                <li class="nav__lists"><a class="nav__tags active" href="home.html">Home</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="DogBreed.html">Dog Breed</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="DogCare.html">Dog Care</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="Reviews.html">Reviews</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="AboutUs.html">About Us</a></li>
+                <li class="nav__lists"><a class="nav__tags btn" href="LogIn.html">Log In / Sign UP</a></li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+
+            <i class="fa-solid fa-bars"></i>
+
         </label>
-        <h1 class="head">Find-A-<span class="head_f">Fido!</span></h1>
-        <ul class="nav__lists">
-            <li><a class="nav__tags" href="home.html">Home</a></li>
-            <li><a class="nav__tags" href="DogBreed.html">Dog Breed</a></li>
-            <li><a class="nav__tags" href="DogCare.html">Dog Care</a></li>
-            <li><a class="nav__tags" href="Reviews.html">Reviews</a></li>
-            <li><a class="nav__tags" href="AboutUs.html">About Us</a></li>
-            <li><a class="nav__tags btna" href="SignUp.html">Sign UP</a></li>
-            <li><a class="nav__tags btnb" href="LogIn.html">Log IN</a></li>
-        </ul>
-    </nav>
+        
+    </header>        
 </body>
+
 </html>
