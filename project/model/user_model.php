@@ -94,7 +94,7 @@ function get_user_by_id($id) {
     return $users;
 }
 
-function create_users($user) {
+function create_user($user) {
     global $database;
 
     // create new user

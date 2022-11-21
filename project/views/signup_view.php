@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Find a Fido</title>
+    <title>Create Account | Find a Fido</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -15,7 +15,7 @@
             -o-background-size: cover;
             background-size: cover;
             background-color: #B9DEE7;
-        }
+          }
 
         /* login flex container */
         .loginContainer {
@@ -100,7 +100,7 @@
             margin-top: 20px;
             height: 45px;
             background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
-                font-size: 25px;
+            font-size: 25px;
             font-weight: 500;
             letter-spacing: 2px;
             color: white;
@@ -116,31 +116,35 @@
             color: rgb(43, 60, 133);
             font-family: 'Fredoka', sans-serif;
         }
+
+
+
     </style>
 </head>
 <body>
     <div class="loginContainer">
         <section class="createAccount">
-            <h1>Login</h1>
+            <h1>Create Account</h1>
             <?php 
-                // will display error message if unable to login
+                // will display error message if unable to create account
                 if (isset($message) && $message != " ") {
                     echo $message; 
                 }
             ?>
-            <br>
-            <form action="../controllers/login_controller.php" method="post">
+            <form action="../controllers/signup_controller.php" method="post">
+                <label class="nameAlign" for="name">Name:</label><br>
+                <input class="it" type="text" id="name" name="name" placeholder="Enter your name" required><br>
+                
                 <label class="emailAlign" for="email">Email:</label><br>
                 <input class="it" type="text" id="email" name="email" placeholder="Enter your email" required><br>
-
+                
                 <label class="passwordAlign" for="password">Password:</label><br>
                 <input class="it" type="password" id="password" name="password" placeholder="Enter your password" required><br>
                 
-                <input type="hidden" name="action" value="login">
-                <input class="button" type="submit" value="Login">
+                <input type="hidden" name="action" value="create_account">
+                <input class="button" type="submit" value="Submit">
             </form>
-            <p>Don't have an account? <a href="../views/signup_view.php">Sign up!</a></p>
-
+            <p>Already have an account? <a href="../views/login_view.php">Login!</a></p>
         </section>
     </div>
 </body>
