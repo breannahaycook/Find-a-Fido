@@ -51,14 +51,14 @@
             .hamburger{
                 display: none;
             }
-            .head{
+/*            .head{
                 font-size: 30px;
 
             }
             .head_f{
                 font-size: 40px;
                 color: blue;
-            }
+            }*/
 
             .nav__label{
                 display: flex;
@@ -199,7 +199,7 @@
                     padding-left: 10px;
 
                 }
-                .head{
+/*                .head{
                     font-size: 22px;
 
                 }
@@ -207,7 +207,7 @@
                 .head_f{
                     font-size: 22px;
                     color: blue;
-                }
+                }*/
                 .nav__logo{
                     height: 80px;
                     border-radius: 25px;
@@ -220,26 +220,22 @@
 
 
 
-
-
-
-
         </style>
     </head>
     <body>
         <header class="header">
             <div class="nav__label">
                 <img class="nav__logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!">
-                <h1 class="head">Find-A-<span class="head_f">Fido!</span></h1>  
+                 
             </div>
             <nav class="nav__bar">    
                 <ul class="nav__items">
-                    <li class="nav__lists"><a class="nav__tags active" href="home.html">Home</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="DogBreed.html">Dog Breed</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="DogCare.html">Dog Care</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="Reviews.html">Reviews</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="AboutUs.html">About Us</a></li>
-                    <li class="nav__lists"><a class="nav__tags btn" href="LogIn.html">Log In / Sign UP</a></li>
+                    <li class="nav__lists"><a class="nav__tags" href="home_view.php">Home</a></li>
+                    <li class="nav__lists"><a class="nav__tags" href="dog_breed_view.php">Dog Breed</a></li>
+                    <li class="nav__lists"><a class="nav__tags" href="dog_care_view.php">Dog Care</a></li>
+                    <li class="nav__lists"><a class="nav__tags" href="reivews_view.php">Reviews</a></li>
+                    <li class="nav__lists"><a class="nav__tags" href="about_us_view.php">About Us</a></li>
+                    <li class="nav__lists"><a class="nav__tags btn" href="login_view.php">Log In / Sign UP</a></li>
                 </ul>
             </nav>
             <input type="checkbox" id="check">

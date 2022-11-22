@@ -6,8 +6,155 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
         <title>Dog Breeds | Find-A-Fido</title>
+        
+        <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    .button{
+        background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+        border-radius: 35px;
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        height: 30px;
+        letter-spacing: 1px;
+    }
+
+    .checked {
+        color: #B9DEE7;
+    }
+
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 25px;
+    }
+
+    .notchecked {
+        color: #D3d3d3;
+    }
+
+    h1 {
+        color: rgb(60, 77, 156);
+        font-family: 'Fredoka', sans-serif;
+        font-size: 50px;
+        letter-spacing: 1px;
+        text-align: center;
+        text-shadow: 0px 3px 2px rgb(201, 201, 201);
+    }
+    h5 {
+        color: rgb(43, 60, 133);
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        margin: 30px;
+    }
+
+    h4 {
+        color: rgb(60, 77, 156);
+        font-size: 17px;
+    }
+
+    img {
+        display: block;
+        border-radius: 50px;
+        height: 275px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label {
+        font-size: 15px;
+    }
+    
+    .boneBackground{
+        background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
+    }
+
+    main {
+        margin-left: 250px;
+    }
+
+    p {
+        color: rgb(43, 60, 133);
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        margin: 30px;
+        text-align: center;
+    }
+
+    .results {
+        border-radius: 50px;
+        display: block;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+    }
+
+    section {
+        background-color: white;
+        border-radius: 70px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+        font-family: 'Roboto', sans-serif;
+        height: 60%;
+        width: 70vw;
+        min-width: 600px;
+    }
+
+    .sidenav {
+        background-color: #3A4B86;
+        color: #FFFFFF;
+        font-family: 'Fredoka', sans-serif;            
+        font-size: 15px;
+        height: 100%;
+        left: 0;
+        overflow-x: hidden;
+        padding-left: 25px;
+        position: fixed;
+        top: 0; /* Stay at the top */
+        width: 250px;
+        z-index: 1; /* Stay on top */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .tags{
+        background: #B9DEE7;
+        border: none;
+        border-radius: 35px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+        color: #3A4B86;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        height: 30px;
+        letter-spacing: 1px;
+        margin-left: 30px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
     </head>
+    <?php 
+            include('nav.php');
+        ?>
     <body>
+        
         <main>
             <div class="sidenav">
                 <h2>Filters:</h2>
@@ -213,146 +360,8 @@
             <?php } ?>
         </main>
     </body>
+    <?php
+    include('footer.php');
+    ?>
 </html>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-    .button{
-        background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
-        border: none;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-        border-radius: 35px;
-        color: white;
-        font-family: 'Fredoka', sans-serif;
-        font-size: 15px;
-        font-weight: 500;
-        height: 30px;
-        letter-spacing: 1px;
-    }
-
-    .checked {
-        color: #B9DEE7;
-    }
-
-    .container {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: 25px;
-    }
-
-    .notchecked {
-        color: #D3d3d3;
-    }
-
-    h1 {
-        color: rgb(60, 77, 156);
-        font-family: 'Fredoka', sans-serif;
-        font-size: 50px;
-        letter-spacing: 1px;
-        text-align: center;
-        text-shadow: 0px 3px 2px rgb(201, 201, 201);
-    }
-    h5 {
-        color: rgb(43, 60, 133);
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        margin: 30px;
-    }
-
-    h4 {
-        color: rgb(60, 77, 156);
-        font-size: 17px;
-    }
-
-    img {
-        display: block;
-        border-radius: 50px;
-        height: 275px;
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    label {
-        font-size: 15px;
-    }
-    
-    .boneBackground{
-        background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
-    }
-
-    main {
-        margin-left: 250px;
-    }
-
-    p {
-        color: rgb(43, 60, 133);
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        margin: 30px;
-        text-align: center;
-    }
-
-    .results {
-        border-radius: 50px;
-        display: block;
-        height: 250px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
-    }
-
-    section {
-        background-color: white;
-        border-radius: 70px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-        font-family: 'Roboto', sans-serif;
-        height: 60%;
-        width: 70vw;
-        min-width: 600px;
-    }
-
-    .sidenav {
-        background-color: #3A4B86;
-        color: #FFFFFF;
-        font-family: 'Fredoka', sans-serif;            
-        font-size: 15px;
-        height: 100%;
-        left: 0;
-        overflow-x: hidden;
-        padding-left: 25px;
-        position: fixed;
-        top: 0; /* Stay at the top */
-        width: 250px;
-        z-index: 1; /* Stay on top */
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .tags{
-        background: #B9DEE7;
-        border: none;
-        border-radius: 35px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-        color: #3A4B86;
-        font-family: 'Fredoka', sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        height: 30px;
-        letter-spacing: 1px;
-        margin-left: 30px;
-        padding: 5px;
-        text-align: center;
-    }
-
-    td {
-        text-align: center;
-    }
-</style>
