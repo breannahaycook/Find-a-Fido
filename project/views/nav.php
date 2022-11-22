@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
-        <title>Document</title>
         <style>
 
             @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -199,15 +192,15 @@
                     padding-left: 10px;
 
                 }
-/*                .head{
-                    font-size: 22px;
-
-                }
-
-                .head_f{
-                    font-size: 22px;
-                    color: blue;
-                }*/
+                /*                .head{
+                                    font-size: 22px;
+                
+                                }
+                
+                                .head_f{
+                                    font-size: 22px;
+                                    color: blue;
+                                }*/
                 .nav__logo{
                     height: 80px;
                     border-radius: 25px;
@@ -216,36 +209,73 @@
                     margin-right: 11px;
                 }
 
-            }
+
+                .btns{
+                    background-color: var(--button);
+                    transition: all 0.5s ease-in-out;
+                    border-radius: 100px;
+                    color: black;
+                }
+
+                .checkbtn{
+                    color: var(--hovercolor);
+                    font-size: 25px;
+                    cursor: pointer;
+                    float: right;
+                    display: none;
+                }
+
+                #check{
+                    display: none;
+                }
+
+
+                @media screen and (max-width: 1442px) {
+
+                    .nav__lists{
+                        padding-right: 15px;
+                    }
+
 
 
 
         </style>
-    </head>
-    <body>
-        <header class="header">
-            <div class="nav__label">
-                <img class="nav__logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!">
-                 
-            </div>
-            <nav class="nav__bar">    
-                <ul class="nav__items">
-                    <li class="nav__lists"><a class="nav__tags" href="home_view.php">Home</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="dog_breed_view.php">Dog Breed</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="dog_care_view.php">Dog Care</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="reivews_view.php">Reviews</a></li>
-                    <li class="nav__lists"><a class="nav__tags" href="about_us_view.php">About Us</a></li>
-                    <li class="nav__lists"><a class="nav__tags btn" href="login_view.php">Log In / Sign UP</a></li>
-                </ul>
-            </nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
+        
+        
+    <header class="header">
+        <div class="nav__label">
+            <img class="nav__logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!">
 
-                <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="nav__bar">    
+            <ul class="nav__items">
+                <li class="nav__lists"><a class="nav__tags" href="../controllers/home_controller.php">Home</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="../controllers/breed_info_controller.php">Dog Breed</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="../controllers/dog_care_controller.php">Dog Care</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="../controllers/reviews_controller.php">Reviews</a></li>
+                <li class="nav__lists"><a class="nav__tags" href="../controllers/about_us_controller.php">About Us</a></li>
 
-            </label>
+                <?php if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] ){?>
+                
+                <li class="nav__lists"><a class="nav__tags btns" href="../controllers/login_controller.php?action_url=logout">Log Out</a></li>
+                
+                <?php  } else{?>
+                
+                <li class="nav__lists"><a class="nav__tags btns" href="../controllers/login_controller.php">Log In / Sign UP</a></li>
+                
+                <?php }?>
+ 
+            </ul>
+        </nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
 
-        </header>        
-    </body>
+            <i class="fa-solid fa-bars"></i>
 
-</html>
+        </label>
+
+    </header>   
+
+
+
+

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
         <title>Document</title>
     </head>
     <?php
@@ -11,21 +12,6 @@
     ?>
     <body>
 
-        <section>
-            <nav>
-                <img src="./assets/Picture1.jpg">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="DogBreed.html">Dog Breed</a></li>
-                    <li><a href="DogCare.html">Dog Care</a></li>
-                    <li><a href="Reviews.html">Reviews</a></li>
-                    <li><a href="LogIn.html">LogIn</a></li>
-                    <li><a href="AboutUs.html">About Us</a></li>
-
-
-                </ul>
-            </nav>
-        </section>
         <main>
 
             <hr>
@@ -87,9 +73,9 @@
             <hr>
         </main>
 
+        <?php
+        include('footer.php');
+        ?>
     </body>
-    <?php
-    include('footer.php');
-    ?>
 
 </html>
