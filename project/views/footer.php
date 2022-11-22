@@ -1,165 +1,174 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
+        <title>Document</title>
+        <style>
 
-<style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-    :root {
-        --lightblue: #B9DEE7;
-        --iconbar:#77CCFF;
-        --button: #A91B0D;
-        --buttonafter: #60100B;
-        --hovercolor: #253DA1;
-        --fontcolor: #FFFFFF;
-    }
-
-
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-    }
-    .body{
-        display: grid;
-        justify-content: end;
-        align-content: end;
-        min-height: 100vh;
-    }
-    .footer{
-        background-color: var(--lightblue);
-        position: relative;
-        height: auto;
-        padding: 50px 80px;
-        width: 100%;
-
-    }
-    .footer_logo{
-        height: 60px;
-        border-radius: 15px;
-    }
-
-    .footer_bars{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-gap: 90px;
-
-    }
-
-    .aboutus_h{
-        position: relative;
-        color: var(--fontcolor);
-        font-weight: 500;
-        margin-bottom: 15px;
-    }
-
-    .aboutus_h::before{
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 50px;
-        height: 6px;
-        background: #253DA1;
-    }
-
-    .aboutus_p{
-        color: var(--fontcolor);
-        line-height: 2;
-
-    }
-
-    .aboutus_ul{
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 60px);
-        grid-gap: 10px;
-    }
-
-    .aboutus_li{
-        list-style: none;
-    }
-
-    .aboutus_a{
-        display: inline-block;
-        height: 48px;
-        width: 48px;
-        background: var(--iconbar);
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        border-radius: 20px;
-    }
-
-    .aboutus_a:hover{
-        color: red;
-    }
-
-    .links{
-        position: relative;
-    }
+            :root {
+                --lightblue: #B9DEE7;
+                --iconbar:#77CCFF;
+                --button: #A91B0D;
+                --buttonafter: #60100B;
+                --hovercolor: #253DA1;
+                --fontcolor: #FFFFFF;
+            }
 
 
-    .footer_items{
-        list-style: none;
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+            }
+            .body__footer{
+                display: grid;
+                justify-content: end;
+                align-content: end;
+                min-height: 100vh;
 
-    }
+            }
+            .footer{
+                background-color: var(--lightblue);
+                
+                height: auto;
+                padding: 50px 80px;
+                width: 100%;
 
-    .footer_tags{
-        text-decoration: none;
-        color: var(--fontcolor);
-        display: inline-block;
-        margin-bottom: 10px;
-        transition: all 0.1s ease-in;
+            }
+            .footer_logo{
+                height: 60px;
+                border-radius: 15px;
+            }
+
+            .footer_bars{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                grid-gap: 90px;
+
+            }
+
+            .aboutus_h{
+                position: relative;
+                color: var(--fontcolor);
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+
+            .aboutus_h::before{
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 50px;
+                height: 6px;
+                background: #253DA1;
+            }
+
+            .aboutus_p{
+                color: var(--fontcolor);
+                line-height: 2;
+
+            }
+
+            .aboutus_ul{
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(3, 60px);
+                grid-gap: 10px;
+            }
+
+            .aboutus_li{
+                list-style: none;
+            }
+
+            .aboutus_a{
+                display: inline-block;
+                height: 48px;
+                width: 48px;
+                background: var(--iconbar);
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                border-radius: 20px;
+            }
+
+            .aboutus_a:hover{
+                color: red;
+            }
+
+            .links{
+                position: relative;
+            }
 
 
-    }
-    .footer_tags:hover{
-        color: var(--fontcolor);
-        background: var(--hovercolor);
-        padding: 4px 10px;
-        border-radius: 20px;
-    }
+            .footer_items{
+                list-style: none;
 
-    .contact_us{
-        position: relative;
+            }
 
-    }
-
-    .info_list{
-        display: grid;
-        grid-template-columns: 30px 1fr;
-        margin-bottom: 16px;
-        color: var(--fontcolor);
-
-    }
-
-    .info_a{
-        color: var(--fontcolor);
-    }
-
-    .copy{
-        background-color: var(--hovercolor);
-        width: 100%;
-        padding: 8px 100px;
-        text-align: center;
-        color: var(--fontcolor);
-    }
+            .footer_tags{
+                text-decoration: none;
+                color: var(--fontcolor);
+                display: inline-block;
+                margin-bottom: 10px;
+                transition: all 0.1s ease-in;
 
 
-    @media (max-width: 800px) {
+            }
+            .footer_tags:hover{
+                color: var(--fontcolor);
+                background: var(--hovercolor);
+                padding: 4px 10px;
+                border-radius: 20px;
+            }
 
-        .footer_bars{
-            grid-template-columns: repeat(1, 1fr);
-        }
+            .contact_us{
+                position: relative;
 
-    }
-</style>
+            }
+
+            .info_list{
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                margin-bottom: 16px;
+                color: var(--fontcolor);
+
+            }
+
+            .info_a{
+                color: var(--fontcolor);
+            }
+
+            .copy{
+                background-color: var(--hovercolor);
+                width: 100%;
+                padding: 8px 100px;
+                text-align: center;
+                color: var(--fontcolor);
+            }
 
 
-<div class="body">
+            @media (max-width: 800px) {
+
+                .footer_bars{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+            }
+        </style>
+    </head>
+</body>
+
+<div class="body__footer">
     <footer class="footer">
         <div class="footer_bars">
 
@@ -172,7 +181,7 @@
                 <ul class="aboutus_ul">
                     <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/profile.php?id=100087791181706"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="aboutus_li"><a class="aboutus_a" href="https://www.instagram.com/find_a_fido/"><i class="fab fa-instagram"></i></a></li>
-                    <li class="aboutus_li"><a class="aboutus_a" href="https://www.twitter.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
+                    <li class="aboutus_li"><a class="aboutus_a" href="https://www.ti.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
                 </ul>    
             </div>
 
@@ -212,9 +221,6 @@
     </div>
 
 </div>
+</body>
 
-
-
-
-
-
+</html>
