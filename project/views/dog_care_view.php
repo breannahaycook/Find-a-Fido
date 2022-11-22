@@ -144,7 +144,11 @@
 
         </style>
     </head>
+    <?php
+        include('nav.php');
+        ?>
     <body>
+        
         <div class='heroImage'>
             <div class="heroText">
                 <h1>Dog Care Center</h1>
@@ -480,5 +484,9 @@
                 return marker;
             }
         </script>
+        
     </body>
+    <?php
+        include('footer.php');
+        ?>
 </html>
