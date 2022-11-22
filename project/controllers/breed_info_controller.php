@@ -85,6 +85,7 @@ try {
     }    
     
     include ('../views/dog_breed_view.php');
+    
 } catch (Exception $e) {
     $error_message = $e->getMessage();
     include('../views/error.php');

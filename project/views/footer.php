@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
-        <title>Document</title>
+        
         <style>
 
             @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -31,13 +25,18 @@
                 display: grid;
                 justify-content: end;
                 align-content: end;
-                min-height: 100vh;
+                
 
             }
             .footer{
                 background-color: var(--lightblue);
+
                 
-                height: auto;
+/*                height: auto;*/
+
+
+                
+
                 padding: 50px 80px;
                 width: 100%;
 
@@ -165,62 +164,70 @@
 
             }
         </style>
-    </head>
-</body>
 
-<div class="body__footer">
-    <footer class="footer">
-        <div class="footer_bars">
+        <div class="body__footer">
+            <footer class="footer">
+                <div class="footer_bars">
 
-            <div class="aboutus">
-                <h2 class="aboutus_h">About us</h2>
-                <p class="aboutus_p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, 
-                    asperiores explicabo ipsam animi accusantium. Possimus, quas at nobis deleniti ab aut 
-                    ipsa illo veniam, quis odit in quidem quae.</p>
-                <ul class="aboutus_ul">
-                    <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/profile.php?id=100087791181706"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="aboutus_li"><a class="aboutus_a" href="https://www.instagram.com/find_a_fido/"><i class="fab fa-instagram"></i></a></li>
-                    <li class="aboutus_li"><a class="aboutus_a" href="https://www.ti.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
-                </ul>    
+                    <div class="aboutus">
+                        <h2 class="aboutus_h">About us</h2>
+                        <p class="aboutus_p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, 
+                            asperiores explicabo ipsam animi accusantium. Possimus, quas at nobis deleniti ab aut 
+                            ipsa illo veniam, quis odit in quidem quae.</p>
+                        <ul class="aboutus_ul">
+                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/profile.php?id=100087791181706"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.instagram.com/find_a_fido/"><i class="fab fa-instagram"></i></a></li>
+                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.twitter.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
+                        </ul>    
+                    </div>
+
+                    <div class="links">
+                        <h2 class="aboutus_h">Quick Links</h2>
+                        <ul class="footer_items">
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/home_controller.php">Home</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/breed_info_controller.php">Dog Breed</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/dog_care_controller.php">Dog Care</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/reviews_controller.php">Reviews</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/about_us_controller.php">About Us</a></li>
+
+
+
+
+                            <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"]) { ?>
+
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/login_controller.php?action_url=logout">Log Out</a></li>
+
+                            <?php } else {?>
+
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/login_controller.php">Log In / Sign UP</a></li>
+
+                            <?php }?>
+
+                        </ul>
+                    </div>
+
+                    <div class="contact_us">
+                        <h2 class="aboutus_h">Contact US</h2>
+                        <ul class="info">
+                            <li class="info_list">
+                                <span class="info_list"><i class="fa-regular fa-envelope"></i></span>
+                                <p class="info_p"><a class="info_a" href="#">findfidoocc@gmail.com</a></p>
+                            </li>
+                            <li class="info_list">
+                                <span class="info_list"><i class="fa-solid fa-location-dot"></i></span>
+                                <span class="info_list">Oakland Community College Hall</span>
+                            </li>
+                            <li class="info_list"><a class="info_a" href="#"><img class="footer_logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!"></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </footer>
+
+            <div class="copy">
+                <p>Copyright © Find-A-Fido. All rights Reserved.</p>
             </div>
 
-            <div class="links">
-                <h2 class="aboutus_h">Quick Links</h2>
-                <ul class="footer_items">
-                    <li class="footer_lists"><a class="footer_tags" href="home_view.php">Home</a></li>
-                    <li class="footer_lists"><a class="footer_tags" href="dog_breed_view.php">Dog Breed</a></li>
-                    <li class="footer_lists"><a class="footer_tags" href="dog_care_view.php">Dog Care</a></li>
-                    <li class="footer_lists"><a class="footer_tags" href="reivews_view.php">Reviews</a></li>
-                    <li class="footer_lists"><a class="footer_tags" href="about_us_view.php">About Us</a></li>
-                    <li class="footer_lists"><a class="footer_tags" href="login_view.php">Log In / Sign UP</a></li>
-                </ul>
-            </div>
-
-            <div class="contact_us">
-                <h2 class="aboutus_h">Contact US</h2>
-                <ul class="info">
-                    <li class="info_list">
-                        <span class="info_list"><i class="fa-regular fa-envelope"></i></span>
-                        <p class="info_p"><a class="info_a" href="#">findfidoocc@gmail.com</a></p>
-                    </li>
-                    <li class="info_list">
-                        <span class="info_list"><i class="fa-solid fa-location-dot"></i></span>
-                        <span class="info_list">Oakland Community College Hall</span>
-                    </li>
-                    <li class="info_list"><a class="info_a" href="#"><img class="footer_logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!"></a></li>
-                </ul>
-
-            </div>
         </div>
-
-    </footer>
-
-    <div class="copy">
-        <p>Copyright © Find-A-Fido. All rights Reserved.</p>
-    </div>
-
-</div>
-</body>
-
-</html>

@@ -34,7 +34,7 @@ try {
                 $_SESSION['id'] = $user_info[1];
 
                 // return to home page
-                header("Location: ../views/home_view.php");
+                header("Location: ../controllers/home_controller.php");
             } else {
                 $message = "User connot be logged in at this time, please try again.<br>";
             }
