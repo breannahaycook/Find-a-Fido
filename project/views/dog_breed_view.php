@@ -5,8 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
-        <title>Dog Breeds | Find-A-Fido</title>
-        
+        <title>Dog Breeds | Find-A-Fido</title>      
         <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -62,7 +61,6 @@
 
     img {
         display: block;
-        border-radius: 50px;
         height: 275px;
         width: 300px;
         margin-left: auto;
@@ -91,12 +89,11 @@
     }
 
     .results {
-        border-radius: 50px;
         display: block;
         height: 250px;
         margin-left: auto;
         margin-right: auto;
-        width: 200px;
+        width: 220px;
     }
 
     section {
@@ -364,4 +361,3 @@
     include('footer.php');
     ?>
 </html>
-
