@@ -29,14 +29,14 @@
             }
             .body__footer{
                 display: grid;
-                justify-content: end;
+/*                justify-content: end;*/
                 align-content: end;
                 min-height: 100vh;
 
             }
             .footer{
                 background-color: var(--lightblue);
-                
+
                 height: auto;
                 padding: 50px 80px;
                 width: 100%;
@@ -215,12 +215,12 @@
         </div>
 
     </footer>
-
+</div>
     <div class="copy">
         <p>Copyright © Find-A-Fido. All rights Reserved.</p>
     </div>
 
-</div>
+
 </body>
 
 </html>
