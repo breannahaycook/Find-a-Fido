@@ -8,44 +8,28 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-            .loginBackground {
-                background: url("../utility/assets/whiteDogsBG.jpeg") no-repeat center center fixed;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                background-color: #B9DEE7;
-            }
-
-            /* login flex container */
             .loginContainer {
                 display: flex;
+                background-image: url("../utility/assets/whiteDogsBG.jpeg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center bottom;
                 justify-content: center;
                 align-items: center;
                 height: 90vh;
             }
 
-            h1{
+            .loginh1{
+                padding: 30px 0;
                 font-family: 'Fredoka', sans-serif;
                 font-size: 50px;
-                color: rgb(60, 77, 156);
+                color: #3A4B86;
                 letter-spacing: 1px;
                 text-shadow: 0px 3px 2px rgb(201, 201, 201);
                 text-align: center;
             }
 
-            /* login box */
-            section{
-                text-align: center;
-                background-color: white;
-                height: 440px;
-                width: 440px;
-                border-radius: 70px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-                ;
-            }
-
-            label{
+            .loginLabels{
                 font-size: 18px;
                 color: rgb(43, 60, 133);
                 font-family: 'Fredoka', sans-serif;
@@ -55,11 +39,14 @@
             .createAccount{
                 height: 510px;
                 width: 500px;
+                text-align: center;
+                background-color: white;
+                padding: 30px 0;
+                border-radius: 70px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                ;
             }
 
-
-            /* these are simply because I can't figure out how to align the labels to the left and have the inputs centered at the same time*/
-            /* maybe fix with flex? */
             .emailAlign{
                 margin-right: 50%;
             }
@@ -71,9 +58,8 @@
             .nameAlign{
                 margin-right: 50%
             }
-            /*--------------------------------------------------------------------------*/
 
-            input{
+            .loginInput{
                 margin-top: 10px;
                 margin-bottom: 10px;
                 width: 60%;
@@ -81,7 +67,6 @@
                 text-indent: 5px;
             }
 
-            /* input box style */
             .it{
                 border-radius: 5px;
                 border: 1px solid rgb(186, 192, 199);
@@ -108,10 +93,10 @@
                 border-radius: 35px;
                 border: none;
                 font-family: 'Fredoka', sans-serif;
+                cursor: pointer;
             }
-
-
-            p{
+ 
+            #alreadyHaveAccount{
                 text-align: center;
                 font-style: italic;
                 color: rgb(43, 60, 133);
@@ -128,7 +113,7 @@
     <body>
         <div class="loginContainer">
             <section class="createAccount">
-                <h1>Create Account</h1>
+                <h1 class="loginh1">Create Account</h1>
                 <?php
                 // will display error message if unable to create account
                 if (isset($message) && $message != " ") {
@@ -136,20 +121,20 @@
                 }
                 ?>
                 
-                <form action="../controllers/signup_controller.php" method="post">
-                    <label class="nameAlign" for="name">Name:</label><br>
-                    <input class="it" type="text" id="name" name="name" placeholder="Enter your name" required><br>
+                    <form action="../controllers/signup_controller.php" method="post">
+                        <label class="nameAlign loginLabels" for="name">Name:</label><br>
+                        <input class="it loginInput" type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
-                    <label class="emailAlign" for="email">Email:</label><br>
-                    <input class="it" type="text" id="email" name="email" placeholder="Enter your email" required><br>
+                        <label class="emailAlign loginLabels" for="email">Email:</label><br>
+                        <input class="it loginInput" type="text" id="email" name="email" placeholder="Enter your email" required><br>
 
-                    <label class="passwordAlign" for="password">Password:</label><br>
-                    <input class="it" type="password" id="password" name="password" placeholder="Enter your password" required><br>
+                        <label class="passwordAlign loginLabels" for="password">Password:</label><br>
+                        <input class="it loginInput" type="password" id="password" name="password" placeholder="Enter your password" required><br>
 
-                    <input type="hidden" name="action" value="create_account">
-                    <input class="button" type="submit" value="Submit">
-                </form>
-                <p>Already have an account? <a href="../views/login_view.php">Login!</a></p>
+                        <input type="hidden" name="action" value="create_account">
+                        <input class="button loginInput" type="submit" value="Submit">
+                    </form>
+                <p id="alreadyHaveAccount">Already have an account? <a href="../views/login_view.php">Login!</a></p>      
             </section>
         </div>
         
