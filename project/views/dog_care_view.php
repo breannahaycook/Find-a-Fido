@@ -21,15 +21,9 @@
                 width: 90%;
                 height: 500px;
                 margin: auto;
-                padding: 0;
             }
 
-            a{
-                text-decoration: none; 
-                text-align: center;
-            }
-
-            h3{
+            #continueh3{
                 font-family: 'Roboto', sans-serif;
                 width: 75%;
                 margin: auto;
@@ -39,11 +33,10 @@
                 margin-bottom: 40px;
             }
 
-            h1{
+            #dogCareTitle{
                 font-family: 'Fredoka', serif;
                 font-size: 70px;
                 letter-spacing: 1px;
-
             }
 
             .dogCareResourceImg{
@@ -53,33 +46,35 @@
                 object-fit: cover;
             }
 
-
-            ul{
+            #groomingList{
                 width:150px;
                 text-align: center;
                 list-style-position: inside;
                 margin: auto;
             }
-            li{
+            .groomingItem{
                 text-align: left;
                 font-family: 'Roboto', sans-serif;
                 font-size: 18px;
             }
 
-
             hr{
-                width: 90%;
+                width: 100%;
                 margin-top: 20px;
             }
 
-            h2{
+            .resourceTitle{
                 font-family: 'Fredoka', serif;
-                color: rgb(60, 77, 156);
+                color: #3A4B86;
                 font-size: 50px;
             }
+            
             .adopth2{
                 font-family: 'Merriweather', serif;
+                padding-top: 20px;
+                padding-bottom: 20px;
                 font-size:30px;
+                color: #3A4B86;
             }
 
             .dogCareContainer{
@@ -89,21 +84,18 @@
                 flex-direction: column;
                 justify-content: center;
                 text-align: center;
-
             }
 
             .careDesc{
                 font-family: 'Fredoka', serif;
-
                 width: 80%;
                 margin: auto;
                 margin-top: 20px;
                 margin-bottom: 20px;
                 font-size: 18px;
-
             }
 
-            .heroImage{
+            #dogCareHero{
                 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../utility/assets/dog_care.jpg");
                 width: 100%;
                 height: 35%;
@@ -112,7 +104,7 @@
                 background-size: cover;
                 position: relative;
             }
-            .heroText {
+            #dogCareHeroText {
                 text-align: center;
                 font-family: 'Fredoka', serif;
                 position: absolute;
@@ -122,7 +114,7 @@
                 color: white;
             }
 
-            .heroDesc{
+            #dogCareHeroDesc{
                 font-size: 23px;
             }
 
@@ -150,16 +142,16 @@
         ?>
     <body>
         
-        <div class='heroImage'>
-            <div class="heroText">
-                <h1>Dog Care Center</h1>
-                <p class="heroDesc">Essential ways to care for your pets</p>
+        <div id="dogCareHero">
+            <div id="dogCareHeroText">
+                <h1 id="dogCareTitle">Dog Care Center</h1>
+                <p id="dogCareHeroDesc">Essential ways to care for your pets</p>
             </div>
         </div>
         <div class="dogCareContainer">
             <section>         
                 <img class="dogCareResourceImg" src="../utility/assets/vet.jpg">
-                <h2>Veterinary Care</h2>
+                <h2 class="resourceTitle">Veterinary Care</h2>
                 <p class="careDesc">A Veterinarian, or Vet, is an animal doctor that is responsible for diagnosing 
                     and treating animals who are sick, injured or need routine care. Their duties include 
                     giving advice to humans on how to properly care for their pets, administering medication 
@@ -172,7 +164,7 @@
 
                     Vet bills can be costly, so contact your local vet to discuss costs, payment plans, and insurance.
                     <br>
-                    Interested in finding a clinic near you? <a href="#map">Check out our interactive map below!</a>
+                    Interested in finding a clinic near you? <a href="#map" class="dogCareLinks">Check out our interactive map below!</a>
                 </p>
 
             </section>
@@ -180,19 +172,19 @@
             <section>
 
                 <img class="dogCareResourceImg" src="../utility/assets/grooming.png">
-                <h2>Grooming</h2>
+                <h2 class="resourceTitle">Grooming</h2>
                 <p class="careDesc">
                     Bathing and grooming are essential to a healthy and happy pet. How often you need to groom your dog will depend on the breed 
                     (take our lifestyle survey to find a breed that works with your schedule!) and hair type. There are a lot of steps involved 
                     in the grooming process including, but not limited to:</p>
                 <br>
-                <ul>
-                    <li>Shampooing</li>
-                    <li>Blow-Drying</li>
-                    <li>Style/Cut</li>
-                    <li>Nail trim</li>
-                    <li>Paw Pad Trim</li>
-                    <li>Ear cleaning</li>
+                <ul id="groomingList">
+                    <li class="groomingItem">Shampooing</li>
+                    <li class="groomingItem">Blow-Drying</li>
+                    <li class="groomingItem">Style/Cut</li>
+                    <li class="groomingItem">Nail trim</li>
+                    <li class="groomingItem">Paw Pad Trim</li>
+                    <li class="groomingItem">Ear cleaning</li>
                 </ul>
                 <br>
                 <p class="careDesc">
@@ -212,7 +204,7 @@
             <section>     
                 <hr>
                 <img class="dogCareResourceImg" src="../utility/assets/dog_park.jpg">
-                <h2>Dog Park</h2>
+                <h2 class="resourceTitle">Dog Park</h2>
                 <p class="careDesc">There are several benefits a dog park has to offer as far as your pet is concerned. 
                     It gives them an opportunity to be free of a leash, an opportunity to be able to 
                     roam in a large area instead of being confined to a small fenced-in area or enclosure 
@@ -229,10 +221,10 @@
             </section>
             <section>
                 <h2 class="adopth2">Interested in adopting a dog?</h2>
-                <h3>Continue reading to learn more about adoption options</h3>
+                <h3 id="continueh3">Continue reading to learn more about adoption options</h3>
                 <hr>
                 <img class="dogCareResourceImg" src="../utility/assets/shelter.jpg">
-                <h2 >Animal Shelter</h2>
+                <h2 class="resourceTitle" >Animal Shelter</h2>
 
                 <p class="careDesc">
                     Every year thousands of dogs are dropped off at the side of the road because owners didn’t properly spay or neuter them, 
@@ -250,7 +242,7 @@
             <section>     
                 <hr>
                 <img class="dogCareResourceImg" src="../utility/assets/breeder.jpg">
-                <h2>Breeder</h2>
+                <h2 class="resourceTitle">Breeder</h2>
                 <p class="careDesc">
                     A dog breeder is a professional who breeds dogs to produce puppies and matches those puppies to new owners. Breeders will typically 
                     be specialized in and sell one particular breed of dog. Buying a puppy from a reputable breeder prepares you with the knowledge of practically everything that you need 
@@ -271,7 +263,7 @@
             <section>     
                 <hr>
                 <img class="dogCareResourceImg" src="../utility/assets/pet_store.jpg">
-                <h2>Pet Store</h2>
+                <h2 class="resourceTitle">Pet Store</h2>
                 <p class="careDesc">
                     A pet store or pet shop is a retail business which sells animals and pet care resources to the public. You may have seen one in your local mall! They are ideal 
                     for impulse buyers but offer very little information about a puppy’s background. The most obvious advantage of buying a puppy from a pet store is that you can 
