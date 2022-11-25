@@ -32,42 +32,43 @@
             }
 
 
-/*            body__header{
-                font-family: "Lato", sans-serif;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 1.7;
-                color: #777;
-                padding: 150px;
-            }*/
+            /*            body__header{
+                            font-family: "Lato", sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 1.7;
+                            color: #777;
+                            padding: 150px;
+                        }*/
 
-            .header__section{
+
+            .header__section {
                 height: 105vh;
-                background-image: linear-gradient(
-                    to right bottom, rgba(0, 111, 230, 0.646),
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
                     rgba(0, 62, 128, 0.405)),
-                    url(../img/background_Header.webp);
+                    url(../utility/assets/whiteDogsBG.jpeg);
                 background-size: cover;
                 background-position: center;
-                clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+                /* clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); */
                 position: relative;
                 font-family: "Lato", sans-serif;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 1.7;
+
             }
 
-            .logo-box{
+            .logo-box {
                 position: absolute;
                 top: 10px;
                 left: 20px;
             }
 
-            .logo{
+            .logo {
                 height: 85px;
             }
 
-            .header-text-box{
+            .header-text-box {
                 position: absolute;
                 top: 40%;
                 left: 50%;
@@ -75,14 +76,14 @@
                 text-align: center;
             }
 
-            .heading-primary{
+            .heading-primary {
                 color: #fff;
                 text-transform: uppercase;
                 backface-visibility: hidden;
                 margin-bottom: 50px;
             }
 
-            .heading-primary-main{
+            .heading-primary-main {
                 display: block;
                 font-size: 80px;
                 font-weight: 400;
@@ -93,7 +94,7 @@
 
             }
 
-            .heading-primary-second{
+            .heading-primary-second {
                 display: block;
                 font-size: 20px;
                 font-weight: 700;
@@ -103,33 +104,34 @@
 
             }
 
-            @keyframes moveInLeft{
-                0%{
+            @keyframes moveInLeft {
+                0% {
                     opacity: 0;
                     transform: translateX(-100px);
                 }
 
-                80%{
+                80% {
                     transform: translate(5px);
                 }
 
-                100%{
+                100% {
                     opacity: 1;
                     transform: translate(0);
 
                 }
             }
-            @keyframes moveInRight{
-                0%{
+
+            @keyframes moveInRight {
+                0% {
                     opacity: 0;
                     transform: translateX(100px);
                 }
 
-                80%{
+                80% {
                     transform: translate(-5px);
                 }
 
-                100%{
+                100% {
                     opacity: 1;
                     transform: translate(0);
 
@@ -154,62 +156,220 @@
                 box-shadow: 0 10px 20px black;
 
             }
+
             .btn:active {
                 transform: translateY(-1px);
                 box-shadow: 0 5px 10px black;
 
             }
 
-            .btn-white{
+            .btn-white {
                 background-color: #fff;
                 color: #777;
             }
 
-            .btn::after{
+            .btn::after {
                 content: "";
                 display: 100%;
                 height: 100%;
-                width:100%;
+                width: 100%;
                 border-radius: 100px;
 
             }
-            .main-cointainer{
-                display: grid;
-                grid-template-columns: 1fr 4fr ;
-                grid-template-rows: 1fr;
-                grid-column-gap: 90px;
-                
-                height: 100vh;
-                
-                
-                
-            }
-            
-            .main-cointainer--reviews{
-                display: grid;
 
-                grid-template-columns: 1fr  ;
-                grid-template-rows: repeat(4, 1fr);
-                grid-row-gap: 50px;
+
+            /* ----------------CSSSS div main section container--------------------- */
+
+            .main-cointainer {
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
+                    rgba(0, 62, 128, 0.334)),
+                    url();
+
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem;
+
+
+
+
+
             }
-            
-            .main-cointainer--form{
-                display: grid;
-                margin:0 auto;
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(8, 1fr);
-                grid-row-gap: 50px; 
-                
-                
+
+            /* ------------------Css design for form container-------------*/
+
+            .main-cointainer--form {
+
+                background-color: white;
+                width: 60vw;
+                margin-right: 20px;
+                padding: 50px;
+                text-align: left;
+                font-size: 20px;
+                border-radius: 40px;
+                box-shadow: 20px 10px 50px black;
+
             }
+
+
+            .main-cointainer--form-main-one{
+                /* text-align: center; */
+                /* margin: 0 auto; */
+                padding: 50px 150px 90px 150px;
+                margin-bottom: 50px;
+                border: 5px solid black;
+                border-radius: 20px;
+                box-shadow: 10px 5px 10px black;
+            }
+
+            .main-cointainer--form-one-p {
+                margin-bottom: 40px;
+                color: black;
+
+            }
+
+            .main-cointainer--form-one-chkbox {
+                margin-bottom: 20px;
+            }
+
+            .main-cointainer--form-one-chk{
+                margin-right: 20px;
+            }
+
+            .main-cointainer--form_btn {
+                display: flex;
+                justify-content: center;
+            }
+
+            .main-cointainer--form_btn-sb{
+
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 30px 90px;
+                border-radius: 100px;
+                background-color: #003d80;
+                color: #fff;
+                transition: all .1s;
+                font-size: 16px;
+            }
+
+
+            .main-cointainer--form_btn-sb:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px black;
+
+            }
+
+            .main-cointainer--form_btn-sb:active {
+                transform: translateY(-1px);
+                box-shadow: 0 5px 10px black;
+                color: black;
+
+            }
+
+
+            .main-cointainer--form_btn-sb::after {
+                content: "";
+                display: 100%;
+                height: 100%;
+                width: 100%;
+                border-radius: 100px;
+
+            }
+
+
+
+            /*-------- Css design for reviews container ---------------*/
+
+            .main-cointainer--reviews {
+
+                background-color: white;
+                width: 25vw;
+                padding: 20px 40px 20px 40px;
+                border-radius: 20px;
+                text-align: center;
+                font-size: 15px;
+                box-shadow: 10px 10px 20px black;
+            }
+
+            .main-cointainer--reviews-one{
+                padding: 30px 20px 70px 20px;
+            }
+
+            .main-cointainer--reviews-one-img {
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                /* height: 30vh; */
+                width: 10vw;
+                border: 5px solid black;
+                margin-bottom: 20px;
+            }
+            .reviews-header{
+                margin-bottom: 10px;
+            }
+            .reviews-p-first{
+                letter-spacing: 2px;
+            }
+
+            /* -------section-activity------------- */
+
+            .activity--container-main{
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.621),
+                    rgba(0, 62, 128, 0.384)),
+                    url(../utility/assets/whiteDogsBG.jpeg);
+                padding: 30px;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .activity--container-main-greetings{
+                text-align: center;
+                padding: 80px;
+            }
+
+            .activity--container-main-greetings-h{
+                font-size: 30px;
+            }
+
+            .activity--container-main-section{
+                display: flex;
+                justify-content: space-around;
+                padding: 50px 10px 50px 10px;
+            }
+
+            .activity--container-main-section-block{
+                text-align: center;
+                margin: 20px 10px 20px 10px;
+                padding: 10px 20px;
+                border-radius: 20px;
+                box-shadow: 10px 10px 20px black;
+                background-color: #fff;
+            }
+
+            .activity--container-main-img{
+                width: 20vw;
+                /* margin: 50px; */
+                padding: 50px;
+            }
+
+            .activity--container-main-h{
+                margin-bottom: 20px;
+            }
+
+            .activity--container-main-p{
+                padding: 20px;
+            }
+
+
+
+
 
 
         </style>
     </head>
 
     <body>
-         <?php
-
+        <?php
         include('nav.php');
         ?>
 
@@ -223,7 +383,7 @@
                             <span class="heading-primary-main">Find a Fido</span>
                             <span class="heading-primary-second">Find a Friend wtih your Lifestyle.</span>
                         </h1>
-                        <a href="#form" class="btn btn-white">Take our Lifestyle Survey.</a>
+                        <a href="#main-cointainer--form" class="btn btn-white">Take our Lifestyle Survey.</a>
 
                     </div>
                 </section>
@@ -231,148 +391,304 @@
 
             <div class="main-cointainer">
 
-                <aside class="main-cointainer--reviews">
-                    <div class="main-cointainer--reviews_one">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <p class="reviews-p first">lorem ipsum diuwmsdsfassfsffsffs</p>
+                <section class="main-cointainer--form">
+
+                    <div class="main-cointainer--form-main">
+                        <form class="main-cointainer--form-main-f" action="">
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">How much time can you put into training?</p>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="low">
+                                    <label class="main-cointainer--form-one-lbl" for="low">Low</label>
+                                </div>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="moderate">
+                                    <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
+                                </div>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="high">
+                                    <label class="main-cointainer--form-one-lbl" for="high">High</label>
+                                </div>
+
+                            </div>
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">Are allergies an issue?</p>
+                                <div class="main-cointainer--form-one-chkbox">
+
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_no"
+                                           name="range" value="no">
+                                    <label class="main-cointainer--form-one-lbl" for="no">No</label><br>
+                                </div>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_yes"
+                                           name="range" value="yes">
+                                    <label class="main-cointainer--form-one-lbl" for="yes">YES</label><br>
+
+                                </div>
+
+                            </div>
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">How active are you?</p>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="sedantry">
+                                    <label class="main-cointainer--form-one-lbl" for="sedantry">Sedentary</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="moderate_active">
+                                    <label class="main-cointainer--form-one-lbl" for="moderate_active">Moderately
+                                        Active</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="very_active">
+                                    <label class="main-cointainer--form-one-lbl" for="very_active">Very Active</label>
+                                </div>
+
+
+                            </div>
+
+                            <div class="main-cointainer--form-main-one">
+                                <p class="main-cointainer--form-one-p">How much noise can you tolerate?</p>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="quite">
+                                    <label class="main-cointainer--form-one-lbl" for="quite">Quite</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="medium">
+                                    <label class="main-cointainer--form-one-lbl" for="medium">Medium</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="veryvocal">
+                                    <label class="main-cointainer--form-one-lbl" for="veryvocal">VeryVocal</label>
+                                </div>
+                            </div>
+
+
+                            <div class="main-cointainer--form-main-one">
+                                <p class="main-cointainer--form-one-p">Do you have a small children?</p>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="poor">
+                                    <label class="main-cointainer--form-one-lbl" for="poor">Poor</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="good">
+                                    <label class="main-cointainer--form-one-lbl" for="good">Good</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="great">
+                                    <label class="main-cointainer--form-one-lbl" for="great">Great</label>
+                                </div>
+                            </div>
+
+                            <div class="main-cointainer--form-main-one">
+
+
+                                <p class="main-cointainer--form-one-p">How much time can you dedicate to gromming?</p>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="minimal">
+                                    <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="moderate">
+                                    <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="alot">
+                                    <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
+                                </div>
+                            </div>
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">How much hair can you tolerate?</p>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
+                                           value="minimal">
+                                    <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
+                                           name="range" value="moderate">
+                                    <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
+                                           name="range" value="alot">
+                                    <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
+                                </div>
+
+                            </div>
+
+                            <div class="main-cointainer--form_btn">
+
+                                <button class="main-cointainer--form_btn-sb" type="submit">Submit Form</button>
+
+                            </div>
+
+
+
+                        </form>
 
                     </div>
-                    <div class="main-cointainer--reviews_two">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <img class="img" href="#" >
-                        
-                        <p class="reviews-p first">lorem ipsum diuwmsdsfassfsffsffs</p>
-
-                    </div><!-- comment -->
-                    
-                    <div class="main-cointainer--reviews_three">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <p class="reviews-p first">lorem ipsum diuwmsdsfassfsffsffs</p>
-
-                    </div><!-- comment -->
-                    <div class="main-cointainer--reviews_four">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <p class="reviews-p first">lorem ipsum diuwmsdsfassfsffsffs</p>
-
-                    </div><!-- comment -->
-
-                </aside>
-
-                <section class="main-cointainer--form"> 
-
-                    <div class="main-cointainer--form-one">
-                        <form action="">
-                            <p>How much time can you put into training?</p>
-                            <input type="radio" id="training_low" name="range" value="low">
-                            <label for="low">Low</label><br>
-                            <input type="radio" id="training_medium" name="range" value="moderate">
-                            <label for="moderate">Moderate</label><br>
-                            <input type="radio" id="training_high" name="range" value="high">
-                            <label for="high">High</label>
-                        </form>
-                    </div>
-
-
-                   
-                    <div class="main-cointainer--form-two">
-                        <form action="">
-                            <p>Are allergies an issue?</p>
-                            <input type="radio" id="hypoallergenic_no" name="range" value="no">
-                            <label for="no">No</label><br>
-                            <input type="radio" id="hypoallergenic_yes" name="range" value="yes">
-                            <label for="yes">YES</label><br>
-                        </form>
-                    </div>
-
-                    
-                    <div class="main-cointainer--form-three">
-
-                        <form action="">
-                            <p>How active are you?</p>
-                            <input type="radio" id="training_low" name="range" value="sedantry">
-                            <label for="sedantry">Sedentary</label><br>
-                            <input type="radio" id="training_medium" name="range" value="moderate_active">
-                            <label for="moderate_active">Moderately Active</label><br>
-                            <input type="radio" id="training_high" name="range" value="very_active">
-                            <label for="very_active">Very Active</label>
-                        </form>
-                    </div>    
-
-                
-                    <div class="main-cointainer--form-four">
-                        <form action="">
-                            <p>How much noise can you tolerate?</p>
-                            <input type="radio" id="training_low" name="range" value="quite">
-                            <label for="quite">Quite</label><br>
-                            <input type="radio" id="training_medium" name="range" value="medium">
-                            <label for="medium">Medium</label><br>
-                            <input type="radio" id="training_high" name="range" value="veryvocal">
-                            <label for="veryvocal">VeryVocal</label>
-                        </form>
-                    </div>
-
-                 
-                    <div class="main-cointainer--form-five">
-                        <form action="">
-                            <p>Do you have a small children?</p>
-                            <input type="radio" id="training_low" name="range" value="poor">
-                            <label for="poor">Poor</label><br>
-                            <input type="radio" id="training_medium" name="range" value="good">
-                            <label for="good">Good</label><br>
-                            <input type="radio" id="training_high" name="range" value="great">
-                            <label for="great">Great</label>
-                        </form>
-                    </div>
-
-              
-                    <div class="main-cointainer--form-six">
-                        <form action="">
-                            <p>How much time can you dedicate to gromming?</p>
-                            <input type="radio" id="training_low" name="range" value="minimal">
-                            <label for="minimal">Minimal</label><br>
-                            <input type="radio" id="training_medium" name="range" value="moderate">
-                            <label for="moderate">Moderate</label><br>
-                            <input type="radio" id="training_high" name="range" value="alot">
-                            <label for="alot">A Lot</label>
-                        </form>
-                    </div>
-
-                
-                    <div class="main-cointainer--form-seven">
-                        <form action="">
-                            <p>How much space do you have?</p>
-                            <input type="radio" id="training_low" name="range" value="verylittle">
-                            <label for="verylittle">Very Little</label><br>
-                            <input type="radio" id="training_medium" name="range" value="alittle">
-                            <label for="alittle">A little</label><br>
-                            <input type="radio" id="training_high" name="range" value="alot">
-                            <label for="alot">A Lot</label>
-                        </form>
-                    </div>
-
-                 
-                    <div class="main-cointainer--form-eight">
-                        <form action="">
-                            <p>How much hair can you tolerate?</p>
-                            <input type="radio" id="training_low" name="range" value="minimal">
-                            <label for="minimal">Minimal</label><br>
-                            <input type="radio" id="training_medium" name="range" value="moderate">
-                            <label for="moderate">Moderate</label><br>
-                            <input type="radio" id="training_high" name="range" value="alot">
-                            <label for="alot">A Lot</label>
-                        </form>
-                    </div>
-                   
-                    <button type="submit">Submit Form</button>
-
-               
 
                 </section>
+
+
+                <section class="main-cointainer--reviews">
+
+                    <h1 class="reviews-header">Customer reviews</h1>
+
+                    <div class="main-cointainer--reviews-one">
+
+                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Golden Retriever.jpg"
+                             alt="pictures of the dog">
+                        <h1 class="reviews-header">Husky</h1>
+                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
+                            labore mollitia,
+                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
+                            repudiandae dolore obcaecati odio ipsam.</p>
+
+                    </div>
+
+                    <div class="main-cointainer--reviews-one">
+
+                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
+                        <h1 class="reviews-header">Husky</h1>
+                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
+                            labore mollitia,
+                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
+                            repudiandae dolore obcaecati odio ipsam.</p>
+
+                    </div>
+
+                    <div class="main-cointainer--reviews-one">
+
+                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
+                        <h1 class="reviews-header">Husky</h1>
+                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
+                            labore mollitia,
+                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
+                            repudiandae dolore obcaecati odio ipsam.</p>
+
+                    </div>
+
+                    <div class="main-cointainer--reviews-one">
+
+                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
+                        <h1 class="reviews-header">Customer reviews</h1>
+                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
+                            labore mollitia,
+                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
+                            repudiandae dolore obcaecati odio ipsam.</p>
+
+
+                    </div>
+                    <div class="main-cointainer--reviews-one">
+
+                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
+                        <h1 class="reviews-header">Customer reviews</h1>
+                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
+                            labore mollitia,
+                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
+                            repudiandae dolore obcaecati odio ipsam.</p>
+
+                    </div>
+
+
+
+
+                </section>
+
+            <!-- <section class="main--container--activity">
+
+                <!-- <div>
+<h1>dfeffwefwefwwwwwwwwwwwwwwwww</h1>
+make sure to change the grid container in main 
+
+                </div>
+                    
+
+            </section> -->
+
+
             </div>
 
-        </main>
-         <?php
+            <div class="activity--container-main">
 
+                <div class="activity--container-main-greetings">
+                    <h1 class="activity--container-main-greetings-h">We have more sections where you can choose your breed, or find the local dog vets, grooming and park center.</h1>
+
+                </div>
+
+                <section class="activity--container-main-section">
+
+                    <div class="activity--container-main-section-block">
+
+                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <h1 class="activity--container-main-h"> Dog breed</h1>
+                        <p class="activity--container-main-p">You can also select Breeds from our filter section to your desire needs!</p>
+                        <a href="../controllers/breed_info_controller.php" class="btn btn-white">Dog Breed.</a>
+
+                    </div>
+
+                    <div class="activity--container-main-section-block">
+
+                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <h1 class="activity--container-main-h">Dog Care</h1>
+                        <p class="activity--container-main-p">Concern about you Dog health we can help you find the local wets 
+                            gromming, shredding and also to walk your dog around the park located next to your area.</p>
+                        <a href="../controllers/dog_care_controller.php" class="btn btn-white">Dog Care.</a>
+
+                    </div>
+
+                    <div class="activity--container-main-section-block">
+
+                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <h1 class="activity--container-main-h">About US</h1>
+                        <p class="activity--container-main-p">If you want to know a bit about the creator of the website. Click the link below!!!</p>
+                        <a href="../controllers/about_us_controller.php" class="btn btn-white">About US</a>
+
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <?php
         include('footer.php');
         ?>
 
