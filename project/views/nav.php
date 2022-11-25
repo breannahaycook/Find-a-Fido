@@ -76,20 +76,23 @@
             .nav__tags{
                 text-decoration: none;
                 color: white;
+                background-color: var(--hovercolor);
                 padding: 8px 10px;
+                border-radius: 10px;
+                
             }
 
             .nav__tags:hover{
                 background-color: var(--hovercolor);
                 transition: all 0.5s ease-in-out;
-                border-radius: 100px;
+                border-radius: 50px;
                 color: black;
 
             }
             .btn{
                 background-color: var(--button);
                 transition: all 0.5s ease-in-out;
-                border-radius: 100px;
+                border-radius: 50px;
                 color: black;
             }
 
