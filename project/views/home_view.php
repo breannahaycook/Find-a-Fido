@@ -368,10 +368,12 @@
         </style>
     </head>
 
+    <?php
+    include('nav.php');
+    ?>
+
     <body>
-        <?php
-        include('nav.php');
-        ?>
+
 
 
         <main>
@@ -394,24 +396,42 @@
                 <section class="main-cointainer--form">
 
                     <div class="main-cointainer--form-main">
-                        <form class="main-cointainer--form-main-f" action="">
+
+
+                        <form class="main-cointainer--form-main-f" action="../controllers/results_controller.php" method="POST" >
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">What size dog do you want?</p>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="size" value="S" >
+                                    <label class="main-cointainer--form-one-lbl" for="low">Small</label>
+                                </div>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="size"
+                                           value="M" >
+                                    <label class="main-cointainer--form-one-lbl" for="moderate">Medium</label><br>
+                                </div>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="size" value="L">
+                                    <label class="main-cointainer--form-one-lbl" for="high">Large</label>
+                                </div>
+                            </div>
 
                             <div class="main-cointainer--form-main-one">
 
                                 <p class="main-cointainer--form-one-p">How much time can you put into training?</p>
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="low">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="training_level" value="Low">
                                     <label class="main-cointainer--form-one-lbl" for="low">Low</label>
                                 </div>
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="moderate">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="training_level"
+                                           value="Moderate">
                                     <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
                                 </div>
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="high">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="training_level" value="High">
                                     <label class="main-cointainer--form-one-lbl" for="high">High</label>
                                 </div>
 
@@ -422,13 +442,13 @@
                                 <p class="main-cointainer--form-one-p">Are allergies an issue?</p>
                                 <div class="main-cointainer--form-one-chkbox">
 
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_no"
-                                           name="range" value="no">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_no" name="hypoallergenic"
+                                           value="No">
                                     <label class="main-cointainer--form-one-lbl" for="no">No</label><br>
                                 </div>
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_yes"
-                                           name="range" value="yes">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="hypoallergenic_yes" name="hypoallergenic"
+                                           value="Yes">
                                     <label class="main-cointainer--form-one-lbl" for="yes">YES</label><br>
 
                                 </div>
@@ -440,21 +460,21 @@
                                 <p class="main-cointainer--form-one-p">How active are you?</p>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="sedantry">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="activity_level"
+                                           value="Very Active">
                                     <label class="main-cointainer--form-one-lbl" for="sedantry">Sedentary</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="moderate_active">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="activity_level"
+                                           value="Moderately Active">
                                     <label class="main-cointainer--form-one-lbl" for="moderate_active">Moderately
                                         Active</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="very_active">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="activity_level"
+                                           value="Very Active">
                                     <label class="main-cointainer--form-one-lbl" for="very_active">Very Active</label>
                                 </div>
 
@@ -465,21 +485,20 @@
                                 <p class="main-cointainer--form-one-p">How much noise can you tolerate?</p>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="quite">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="noise_level" value="Quiet">
                                     <label class="main-cointainer--form-one-lbl" for="quite">Quite</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="medium">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="noise_level"
+                                           value="Medium">
                                     <label class="main-cointainer--form-one-lbl" for="medium">Medium</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="veryvocal">
-                                    <label class="main-cointainer--form-one-lbl" for="veryvocal">VeryVocal</label>
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="noise_level"
+                                           value="Very Vocal">
+                                    <label class="main-cointainer--form-one-lbl" for="veryvocal">Very Vocal</label>
                                 </div>
                             </div>
 
@@ -488,20 +507,18 @@
                                 <p class="main-cointainer--form-one-p">Do you have a small children?</p>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="poor">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="kids_temp" value="Poor">
                                     <label class="main-cointainer--form-one-lbl" for="poor">Poor</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="good">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="kids_temp"
+                                           value="Good">
                                     <label class="main-cointainer--form-one-lbl" for="good">Good</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="great">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="kids_temp" value="Great">
                                     <label class="main-cointainer--form-one-lbl" for="great">Great</label>
                                 </div>
                             </div>
@@ -512,46 +529,69 @@
                                 <p class="main-cointainer--form-one-p">How much time can you dedicate to gromming?</p>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="minimal">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="grooming"
+                                           value="Minimal">
                                     <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="moderate">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="grooming"
+                                           value="Moderate">
                                     <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="alot">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="grooming" value="A Lot">
                                     <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
                                 </div>
+
                             </div>
+
+                            <div class="main-cointainer--form-main-one">
+
+                                <p class="main-cointainer--form-one-p">How large is your House Hold?</p>
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="household_size"
+                                           value="Very Little">
+                                    <label class="main-cointainer--form-one-lbl" for="minimal">Very Little</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="household_size"
+                                           value="A Little">
+                                    <label class="main-cointainer--form-one-lbl" for="moderate">A Little</label><br>
+                                </div>
+
+                                <div class="main-cointainer--form-one-chkbox">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="household_size" value="A Lot">
+                                    <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
+                                </div>
+
+                            </div>
+
 
                             <div class="main-cointainer--form-main-one">
 
                                 <p class="main-cointainer--form-one-p">How much hair can you tolerate?</p>
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="range"
-                                           value="minimal">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_low" name="shedding"
+                                           value="Minimal">
                                     <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium"
-                                           name="range" value="moderate">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_medium" name="shedding"
+                                           value="Moderate">
                                     <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
                                 </div>
 
                                 <div class="main-cointainer--form-one-chkbox">
-                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high"
-                                           name="range" value="alot">
+                                    <input class="main-cointainer--form-one-chk" type="radio" id="training_high" name="shedding" value="A Lot">
                                     <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
                                 </div>
 
                             </div>
+
 
                             <div class="main-cointainer--form_btn">
 
@@ -572,77 +612,37 @@
 
                     <h1 class="reviews-header">Customer reviews</h1>
 
-                    <div class="main-cointainer--reviews-one">
-
-                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Golden Retriever.jpg"
-                             alt="pictures of the dog">
-                        <h1 class="reviews-header">Husky</h1>
-                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
-                            labore mollitia,
-                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
-                            repudiandae dolore obcaecati odio ipsam.</p>
-
-                    </div>
 
                     <div class="main-cointainer--reviews-one">
 
-                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
-                        <h1 class="reviews-header">Husky</h1>
-                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
-                            labore mollitia,
-                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
-                            repudiandae dolore obcaecati odio ipsam.</p>
+
+                        <?php $counter = 0; ?>
+
+
+                        <?php foreach ($reviews as $review) : ?>
+
+                            <?php $breed_name = $review->get_breed(); ?>
+
+
+                            <img class="main-cointainer--reviews-one-img" src="../utility/assets/<?php echo $breed_name; ?>.jpg" alt="Picture of a <?php echo $breed_name; ?>">
+
+                            <h1 class="reviews-header"> <?php echo $breed_name; ?> </h1>
+
+                            <p class="reviews-p-first"><?php echo $review->get_review(); ?> </p>
+
+                            <?php
+                            $counter++;
+
+                            if ($counter == 3) {
+                                break;
+                            }
+                        endforeach;
+                        ?>
 
                     </div>
-
-                    <div class="main-cointainer--reviews-one">
-
-                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
-                        <h1 class="reviews-header">Husky</h1>
-                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
-                            labore mollitia,
-                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
-                            repudiandae dolore obcaecati odio ipsam.</p>
-
-                    </div>
-
-                    <div class="main-cointainer--reviews-one">
-
-                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
-                            labore mollitia,
-                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
-                            repudiandae dolore obcaecati odio ipsam.</p>
-
-
-                    </div>
-                    <div class="main-cointainer--reviews-one">
-
-                        <img class="main-cointainer--reviews-one-img" src="../utility/assets/Siberian Husky.jpg">
-                        <h1 class="reviews-header">Customer reviews</h1>
-                        <p class="reviews-p-first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At perferendis
-                            labore mollitia,
-                            ab repellat veritatis quod blanditiis beatae a deserunt magnam excepturi non incidunt iure
-                            repudiandae dolore obcaecati odio ipsam.</p>
-
-                    </div>
-
-
-
 
                 </section>
 
-            <!-- <section class="main--container--activity">
-
-                <!-- <div>
-<h1>dfeffwefwefwwwwwwwwwwwwwwwww</h1>
-make sure to change the grid container in main 
-
-                </div>
-                    
-
-            </section> -->
 
 
             </div>
@@ -658,8 +658,11 @@ make sure to change the grid container in main
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
-                        <h1 class="activity--container-main-h"> Dog breed</h1>
+                        <img class="activity--container-main-img" src="../utility/assets/<?php echo $breed_name; ?>.jpg" alt="Picture of a <?php echo $breed_name; ?>">
+
+
+
+                        <h1 class="activity--container-main-h">Dog Breed</h1>
                         <p class="activity--container-main-p">You can also select Breeds from our filter section to your desire needs!</p>
                         <a href="../controllers/breed_info_controller.php" class="btn btn-white">Dog Breed.</a>
 
@@ -688,10 +691,12 @@ make sure to change the grid container in main
 
             </div>
         </main>
-        <?php
-        include('footer.php');
-        ?>
+
 
     </body>
+
+    <?php
+    include('footer.php');
+    ?>
 
 </html>

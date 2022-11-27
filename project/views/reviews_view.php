@@ -35,7 +35,7 @@
             .header--main {
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.951),
                     rgba(0, 62, 128, 0.279)),
-                    url(./pictures/whiteDogsBG.jpeg);
+                    url(..);
                 color: beige;
                 display: flex;
                 align-items: center;
@@ -206,9 +206,8 @@
                             <div class="main--reviews-first-container-input-container">
                                 <p class="main--reviews-first-container-p-name">Username:</p>
 
-                                <!<!--_Input style problem in name condition -->
-                                <input class="main--reviews-first-container-p-name" type="name" id="password"
-                                       name="username" placeholder="Username." required>
+                              
+                                <input class="main--reviews-first-container-p-name" type="text" name="username" placeholder="Username."/>
                             </div>
 
 
@@ -225,8 +224,10 @@
                             <input class="main--reviews-second-container-button" type="submit" value="Create Review">
 
                         </div>
+                        
 
                 </div>
+                
             </section>
 
             <!-- Did not touch this section yet -->

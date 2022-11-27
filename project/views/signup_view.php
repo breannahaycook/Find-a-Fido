@@ -122,6 +122,7 @@
                 ?>
                 
                     <form action="../controllers/signup_controller.php" method="post">
+                        
                         <label class="nameAlign loginLabels" for="name">Name:</label><br>
                         <input class="it loginInput" type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
@@ -133,8 +134,11 @@
 
                         <input type="hidden" name="action" value="create_account">
                         <input class="button loginInput" type="submit" value="Submit">
+                        
                     </form>
+                
                 <p id="alreadyHaveAccount">Already have an account? <a href="../views/login_view.php">Login!</a></p>      
+                
             </section>
         </div>
         

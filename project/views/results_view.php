@@ -14,8 +14,9 @@
 
             <!-- Display Dog Info -->
             <?php 
-            if(!empty($breeds)) {
-                foreach($breeds as $breed_info) : ?>
+            if(!empty($breeds_training_level_array)) {
+                
+                foreach($breeds_training_level_array as $breed_info) : ?>
                     <div class="container">
                         <section>
                             <?php $breed_name = $breed_info-> get_breed(); ?>
@@ -104,7 +105,7 @@
             } ?>
         </main>
     </body>
-    <?php include 'footer.nav'; ?>
+    <?php include 'footer.php'; ?>
 </html>
 
 <style>
