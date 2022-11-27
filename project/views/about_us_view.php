@@ -202,6 +202,8 @@
                 }
                 document.getElementById(name).style.backgroundImage = array[array[3]];
             }
+            
+            
         </script>
 
 

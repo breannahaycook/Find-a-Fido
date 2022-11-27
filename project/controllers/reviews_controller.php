@@ -19,6 +19,7 @@ try {
     
     if($action === 'create_review') {
         $new_review = new Review($_SESSION['id'], $breed, $review, '', 0);
+        
         create_review($new_review); 
     }
     
