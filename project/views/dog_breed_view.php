@@ -137,7 +137,6 @@
                 position: sticky;
                 top: 0; /* Stay at the top */
                 width: 250px;
-                z-index: -1; /* Stay on top */
             }
 
             table {
