@@ -155,6 +155,7 @@
                 height: 30px;
                 letter-spacing: 1px;
                 margin-left: 30px;
+                margin-bottom: 10px;
                 padding: 5px;
                 text-align: center;
             }
