@@ -140,15 +140,24 @@ function get_breed_by_name($breed) {
     global $database;
     
     // read one breed info
-    $breeds_query = 'SELECT size, training_level, hypoallergenic, activity_level, 
+    $breeds_query = 'SELECT breed, size, training_level, hypoallergenic, activity_level, 
             noise_level, kids_temp, grooming, household_size, shedding, information, id FROM breed_info WHERE breed = :breed';
     $breeds_statement = $database->prepare($breeds_query);
-    $breeds_statement->bindValue(":breed", $breed);
+    $breeds_statement->bindValue(":breed", $breed-> get_breed());
     $breeds_statement->execute();
-    $breeds = $breeds_statement->fetch();
+    $breeds = $breeds_statement->fetchAll();
     $breeds_statement->closeCursor();
     
-    return $breeds;
+    $breeds_array = array();
+    
+    foreach($breeds as $breed) {
+        $breeds_array[] = new Breed($breed['breed'], $breed['size'], $breed['training_level'],
+                $breed['hypoallergenic'], $breed['activity_level'], $breed['noise_level'],
+                $breed['kids_temp'], $breed['grooming'], $breed['household_size'],
+                $breed['shedding'], $breed['information'], $breed['id']);
+    }
+    
+    return $breeds_array;
 }
 
 function filter_breeds($filter) {

@@ -11,8 +11,20 @@
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+            .aboutDogBreeds {
+                text-align: center;
+                color: rgb(102, 102, 102);
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+            }
+            
             .boneBackground{
                 background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
+            }
+            
+            .breedInfoFooter {
+                grid-area: breedInfoFooter;
             }
             
             .button {
@@ -39,8 +51,8 @@
                 margin: 25px;
             }
             
-            .breedInfoFooter {
-                grid-area: breedInfoFooter;
+            .dogBreedsTitle {
+                font-size: 60px;
             }
 
             h1 {
@@ -67,6 +79,11 @@
             
             header {
                 grid-area: header;
+            }
+            
+            hr {
+                width: 85%;
+                margin: auto;
             }
 
             img {
@@ -163,6 +180,11 @@
             td {
                 text-align: center;
             }
+            
+            .title {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
         </style>
     </head>
     <header>
@@ -258,7 +280,17 @@
                 </form>
             </div>
             <div class="searchResults">
-                <h1>Dog Breeds</h1>
+                <div class='title'>
+                    <h1 class="dogBreedsTitle">Dog Breeds</h1>
+                    <p class="aboutDogBreeds">
+                        Find the perfect Fido with our dog breed page! This page contains a list full
+                        of all the dog breeds Find a Fido has to offer. <br> You can browse through this list for a specific 
+                        breed or choose to search by various criteria such as size, activity level, and grooming 
+                        requirements.
+                    </p>
+                    <br>
+                    <hr>
+                </div>
                     <?php if(!empty($tags)){ ?>
                             <h5> <?php echo $i; ?> Applied Filters:</h5>
                     <?php foreach($tags as $tag) : ?>  
