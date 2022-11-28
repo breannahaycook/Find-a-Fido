@@ -60,6 +60,14 @@ try {
     // update review
 //    $review = new Review(0, "", "PoodleReview2", "", 1);
 //    update_review($review);
+    
+    $size = "S";
+    $filter = " WHERE size = \"$size\" ";
+    $filter_breeds = filter_breeds($filter);
+    
+    $training_level = "High";
+    $filter = " WHERE training_level = \"$training_level\" ";
+    $filter_breeds = filter_breeds($filter);
 
     
 } catch (Exception $e) {
@@ -234,43 +242,76 @@ try {
         </table>
         
         <hr>
+       
         
-        <h2>Dog Review By Breed Name Table</h2>
-        <h5><i>get_breed_reviews_by_name($breed)</i></h5>
-        <h4><?php echo "Breed: " . $breed_review_name; ?></h4>
-        <table>
-            <tr>
-                <th>User Id</th>
-                <th>Review</th>
-                <th>Timestamp</th>
-                <th>Id</th>
-            </tr>
-            <tr>
-                <td><?php echo $one_breed_review_by_name[0] ?></td>
-                <td><?php echo $one_breed_review_by_name[1] ?></td>
-                <td><?php echo $one_breed_review_by_name[2] ?></td>
-                <td><?php echo $one_breed_review_by_name[3] ?></td>                                                                
-            </tr>
-        </table>
         
-        <hr>
         
-        <h2>Dog Breed By User Id</h2>
-        <h5><i>get_breed_reviews_by_user_id($user_id)</i></h5>
-        <h4><?php echo "User_Id: " . $breed_review_user_id; ?></h4>
+        <h2>1</h2>
+        <h5><i>get_all_breeds()</i></h5>
         <table>
             <tr>
                 <th>Breed</th>
-                <th>Review</th>
-                <th>Timestamp</th>
+                <th>Size</th>
+                <th>Training Level</th>
+                <th>Hypoallergenic</th>
+                <th>Activity Level</th>
+                <th>Noise Level</th>
+                <th>Kids Temp</th>
+                <th>Grooming Level</th>
+                <th>Household Size</th>
+                <th>Shedding</th>
+                <th>Information</th>
                 <th>Id</th>
             </tr>
-            <?php foreach($breed_reviews_by_user_id as $user_breed_reviews) : ?>
+            <?php foreach($filter_breeds as $breed_info) : ?>
             <tr>
-                <td><?php echo $user_breed_reviews-> get_breed(); ?></td>
-                <td><?php echo $user_breed_reviews-> get_review(); ?></td>
-                <td><?php echo $user_breed_reviews-> get_timestamp(); ?></td>
-                <td><?php echo $user_breed_reviews-> get_id(); ?></td>                                                               
+                <td><?php echo $breed_info-> get_breed(); ?></td>
+                <td><?php echo $breed_info-> get_size(); ?></td>
+                <td><?php echo $breed_info-> get_training_level(); ?></td>
+                <td><?php echo $breed_info-> get_hypoallergenic(); ?></td>
+                <td><?php echo $breed_info-> get_activity_level(); ?></td>
+                <td><?php echo $breed_info-> get_noise_level(); ?></td>
+                <td><?php echo $breed_info-> get_kids_temp(); ?></td>   
+                <td><?php echo $breed_info-> get_grooming(); ?></td>
+                <td><?php echo $breed_info-> get_household_size(); ?></td> 
+                <td><?php echo $breed_info-> get_shedding(); ?></td>
+                <td><?php echo $breed_info-> get_information(); ?></td>
+                <td><?php echo $breed_info-> get_id(); ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        
+        <h2>2</h2>
+        <h5><i>get_all_breeds()</i></h5>
+        <table>
+            <tr>
+                <th>Breed</th>
+                <th>Size</th>
+                <th>Training Level</th>
+                <th>Hypoallergenic</th>
+                <th>Activity Level</th>
+                <th>Noise Level</th>
+                <th>Kids Temp</th>
+                <th>Grooming Level</th>
+                <th>Household Size</th>
+                <th>Shedding</th>
+                <th>Information</th>
+                <th>Id</th>
+            </tr>
+            <?php foreach($filter_breeds as $breed_info) : ?>
+            <tr>
+                <td><?php echo $breed_info-> get_breed(); ?></td>
+                <td><?php echo $breed_info-> get_size(); ?></td>
+                <td><?php echo $breed_info-> get_training_level(); ?></td>
+                <td><?php echo $breed_info-> get_hypoallergenic(); ?></td>
+                <td><?php echo $breed_info-> get_activity_level(); ?></td>
+                <td><?php echo $breed_info-> get_noise_level(); ?></td>
+                <td><?php echo $breed_info-> get_kids_temp(); ?></td>   
+                <td><?php echo $breed_info-> get_grooming(); ?></td>
+                <td><?php echo $breed_info-> get_household_size(); ?></td> 
+                <td><?php echo $breed_info-> get_shedding(); ?></td>
+                <td><?php echo $breed_info-> get_information(); ?></td>
+                <td><?php echo $breed_info-> get_id(); ?></td>
             </tr>
             <?php endforeach; ?>
         </table>
