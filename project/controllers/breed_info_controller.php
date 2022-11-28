@@ -20,13 +20,13 @@ try {
     $tags = [];
     $i = 0;
     
-    if ($action != "search") {
+    if ($action != "Apply Filters") {
         $breeds = get_all_breeds();
     } else {
-        
         if (!empty($size)) {
             $statement .= " size = \"$size\" AND ";
             $tags[] .= "Size: " . $size;
+            $i++;
         }
 
         if (!empty($training_level)) {
@@ -67,7 +67,7 @@ try {
         
         if (!empty($household_size)) {
             $statement .= " household_size = \"$household_size\" AND ";
-            $tags[] .= "Household Size: " . $household_size;
+            $tags[] .= "Household Room Needed: " . $household_size;
             $i++;
         }
         

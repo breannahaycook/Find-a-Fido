@@ -19,13 +19,13 @@
                 background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
                 border: none;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-                border-radius: 35px;
+                border-radius: 10px;
                 color: white;
                 font-family: 'Fredoka', sans-serif;
                 font-size: 15px;
                 font-weight: 500;
-                height: 30px;
-                letter-spacing: 1px;
+                height: 40px;
+                letter-spacing: .5px;
             }
 
             .checked {
@@ -146,7 +146,7 @@
             .tags{
                 background: #B9DEE7;
                 border: none;
-                border-radius: 35px;
+                border-radius: 5px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
                 color: #3A4B86;
                 font-family: 'Fredoka', sans-serif;
@@ -155,6 +155,7 @@
                 height: 30px;
                 letter-spacing: 1px;
                 margin-left: 30px;
+                margin-bottom: 10px;
                 padding: 5px;
                 text-align: center;
             }
@@ -243,7 +244,7 @@
                     <label for="very_vocal">Very Vocal</label>
 
                     <br><br>
-                    Household Size Needed:<br>
+                    Household Room Needed:<br>
                     <input type="radio" name="household_size" value="Very Little">
                     <label for="very_little">Very Little</label><br>
                     <input type="radio" name="household_size" value="A Little">
@@ -252,14 +253,14 @@
                     <label for="a_lot">A Lot</label>
 
                     <br><br>
-                    <input type="hidden" name="action" value="search">
-                    <input class="button" type="submit" value="Apply Filter">
+                    <input class="button" type="submit" name="action" value="Apply Filters">
+                    <input class="button" type="submit"  name="action" value="Clear Filters">
                 </form>
             </div>
             <div class="searchResults">
                 <h1>Dog Breeds</h1>
                     <?php if(!empty($tags)){ ?>
-                            <h5>Applied Filters:</h5>
+                            <h5> <?php echo $i; ?> Applied Filters:</h5>
                     <?php foreach($tags as $tag) : ?>  
                             <button class="tags">
                                  <?php echo $tag; ?>            
