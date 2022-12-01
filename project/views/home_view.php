@@ -43,12 +43,12 @@
 
 
             .header__section {
-                height: 105vh;
+                height: 70vh;
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
                     rgba(0, 62, 128, 0.405)),
                     url(../utility/assets/whiteDogsBG.jpeg);
-                background-size: cover;
-                background-position: center;
+                background-repeat: no-repeat;
+                background-position: bottom;
                 /* clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); */
                 position: relative;
                 font-family: "Lato", sans-serif;
@@ -189,10 +189,6 @@
                 justify-content: space-between;
                 padding: 2rem;
 
-
-
-
-
             }
 
             /* ------------------Css design for form container-------------*/
@@ -200,7 +196,7 @@
             .main-cointainer--form {
 
                 background-color: white;
-                width: 60vw;
+                width: 50vw;
                 margin-right: 20px;
                 padding: 50px;
                 text-align: left;
@@ -289,10 +285,14 @@
                 text-align: center;
                 font-size: 15px;
                 box-shadow: 10px 10px 20px black;
+                height: 80%;
             }
 
             .main-cointainer--reviews-one{
                 padding: 30px 20px 70px 20px;
+                
+                
+                
             }
 
             .main-cointainer--reviews-one-img {
@@ -309,6 +309,8 @@
             }
             .reviews-p-first{
                 letter-spacing: 2px;
+                margin-bottom: 50px;
+                line-height: 25px;
             }
 
             /* -------section-activity------------- */
@@ -361,10 +363,6 @@
             }
 
 
-
-
-
-
         </style>
     </head>
 
@@ -385,7 +383,7 @@
                             <span class="heading-primary-main">Find a Fido</span>
                             <span class="heading-primary-second">Find a Friend wtih your Lifestyle.</span>
                         </h1>
-                        <a href="#main-cointainer--form" class="btn btn-white">Take our Lifestyle Survey.</a>
+                        <a href="# main-cointainer--form" class="btn btn-white">Take our Lifestyle Survey.</a>
 
                     </div>
                 </section>

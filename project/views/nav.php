@@ -158,7 +158,7 @@
                     align-items: center;
                 }
                 .checkbtn{
-                    display: block;
+                    display: none;
                     height: 20px;
                     padding-right: 50px;
 
