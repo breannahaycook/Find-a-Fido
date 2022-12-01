@@ -172,11 +172,10 @@
                     <div class="aboutus">
                         <h2 class="aboutus_h">About us</h2>
                         <p class="aboutus_p">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, 
-                            asperiores explicabo ipsam animi accusantium. Possimus, quas at nobis deleniti ab aut 
-                            ipsa illo veniam, quis odit in quidem quae.</p>
+                            We are a group of four aspiring software engineers built
+                            this project for a Class Project. Let us know your thoughts about this project.</p>
                         <ul class="aboutus_ul">
-                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/profile.php?id=100087791181706"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/people/Find-A-Fido/100087791181706/"><i class="fab fa-facebook-f"></i></a></li>
                             <li class="aboutus_li"><a class="aboutus_a" href="https://www.instagram.com/find_a_fido/"><i class="fab fa-instagram"></i></a></li>
                             <li class="aboutus_li"><a class="aboutus_a" href="https://www.twitter.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
                         </ul>    
