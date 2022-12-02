@@ -21,25 +21,16 @@
                 box-sizing: border-box;
                 font-family: 'Roboto', sans-serif;
             }
+            
             .body__footer{
                 display: grid;
-                justify-content: end;
-                align-content: end;
-                
-
+                align-content: center;
             }
             .footer{
                 background-color: var(--lightblue);
-
-                
 /*                height: auto;*/
-
-
-                
-
                 padding: 50px 80px;
-                width: 100%;
-
+                max-width: 100%;     
             }
             .footer_logo{
                 height: 60px;

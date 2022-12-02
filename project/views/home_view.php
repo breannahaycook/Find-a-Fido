@@ -43,7 +43,7 @@
 
 
             .header__section {
-                height: 70vh;
+                height: 100vh;
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
                     rgba(0, 62, 128, 0.405)),
                     url(../utility/assets/whiteDogsBG.jpeg);
@@ -170,7 +170,7 @@
 
             .btn::after {
                 content: "";
-                display: 100%;
+                display: block;
                 height: 100%;
                 width: 100%;
                 border-radius: 100px;
@@ -179,7 +179,12 @@
 
 
             /* ----------------CSSSS div main section container--------------------- */
-
+            .container-bck-main{
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
+                    rgba(0, 62, 128, 0.334)),
+                    url();
+                
+            }
             .main-cointainer {
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
                     rgba(0, 62, 128, 0.334)),
@@ -188,6 +193,8 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
 
             }
 
@@ -371,11 +378,7 @@
     ?>
 
     <body>
-
-
-
-        <main>
-            <div class="body__header">
+                    <div class="body__header">
                 <section class="header__section">
 
                     <div class="header-text-box">
@@ -383,11 +386,15 @@
                             <span class="heading-primary-main">Find a Fido</span>
                             <span class="heading-primary-second">Find a Friend wtih your Lifestyle.</span>
                         </h1>
-                        <a href="# main-cointainer--form" class="btn btn-white">Take our Lifestyle Survey.</a>
+                        <a href="#main-cointainer--form" class="btn btn-white">Take our Lifestyle Survey.</a>
 
                     </div>
                 </section>
             </div>
+
+
+        <main class="container-bck-main">
+
 
             <div class="main-cointainer">
 
@@ -691,10 +698,12 @@
         </main>
 
 
-    </body>
 
-    <?php
+    </body>
+            <?php
     include('footer.php');
     ?>
+
+    
 
 </html>
