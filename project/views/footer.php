@@ -3,7 +3,7 @@
         
         <style>
 
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@400;500;600;700&display=swap');
 
             :root {
                 --lightblue: #B9DEE7;
@@ -12,6 +12,7 @@
                 --buttonafter: #60100B;
                 --hovercolor: #253DA1;
                 --fontcolor: #FFFFFF;
+                --newbck: rgba(0, 111, 230, 0.646);
             }
 
 
@@ -19,7 +20,7 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Fredoka One', sans-serif;
             }
             
             .body__footer{
@@ -27,7 +28,7 @@
                 align-content: center;
             }
             .footer{
-                background-color: var(--lightblue);
+                background-color: var(--newbck);
 /*                height: auto;*/
                 padding: 50px 80px;
                 max-width: 100%;     
@@ -41,7 +42,7 @@
                 width: 100%;
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
-                grid-gap: 90px;
+                
 
             }
 
@@ -92,7 +93,8 @@
             }
 
             .aboutus_a:hover{
-                color: red;
+                color: var(--button);
+                background: rgba(0, 111, 230, 0.646);
             }
 
             .links{
@@ -145,7 +147,7 @@
                 text-align: center;
                 color: var(--fontcolor);
             }
-
+            
 
             @media (max-width: 800px) {
 
