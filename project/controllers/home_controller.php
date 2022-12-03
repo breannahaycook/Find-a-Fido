@@ -22,6 +22,7 @@ try {
     
    
     include ('../views/home_view.php');
+   
     
     
     
