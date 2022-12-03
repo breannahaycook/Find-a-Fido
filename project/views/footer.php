@@ -178,7 +178,7 @@
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/home_controller.php">Home</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/breed_info_controller.php">Dog Breed</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/dog_care_controller.php">Dog Care</a></li>
-                            <li class="footer_lists"><a class="footer_tags" href="../controllers/reviews_controller.php">Reviews</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/reviews_controller.php">Dog Blog</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/about_us_controller.php">About Us</a></li>
 
 
