@@ -9,7 +9,7 @@
         <title>Home | Find-A-Fido</title>
 
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+            
             @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@400;500;600;700&display=swap');
 
             :root {
@@ -84,7 +84,8 @@
                 animation-name: moveInLeft;
                 animation-duration: 2s;
                 animation-timing-function: ease-out;
-
+                font-family: 'Fredoka One', sans-serif;
+                
             }
 
             .heading-primary-second {
@@ -92,7 +93,7 @@
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 17.4px;
-
+                font-family: 'Fredoka One', sans-serif;
                 animation: moveInRight 2s ease-out;
 
             }
@@ -141,6 +142,7 @@
                 background-color: #003d80;
                 color: #fff;
                 transition: all .1s;
+                font-family: 'Fredoka One', sans-serif;
 
             }
 
@@ -179,7 +181,7 @@
 
             }
             .main-cointainer {
-                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
+                background-image: linear-gradient(to left bottom, rgba(0, 111, 230, 0.653),
                     rgba(0, 62, 128, 0.334)),
                     url();
 
@@ -193,15 +195,21 @@
             }
             .main-cointainer--form {
                 max-width: 800px;
-
                 text-align: left;
                 font-size: 20px;
 
             }
+            
             .main-cointainer--form-one-p {
-                margin: 20px 0;
+                margin: 5% auto;
                 color: black;
+                line-height: 1.7;
+                font-family: 'Fredoka One', sans-serif;
 
+            }
+            .main-cointainer--form-one-lbl{
+                font-family: 'Fredoka One', sans-serif;
+                
             }
 
             .main-cointainer--reviews {
@@ -213,6 +221,7 @@
                 font-size: 15px;
                 box-shadow: 2px 2px 10px black;
                 height: 80%;
+                
 
             }
 
@@ -235,14 +244,17 @@
                 box-shadow: 2px 2px 10px black;
                 display: flex;
                 flex-direction: column;
+                
 
             }
             .main-cointainer--form-one-chkbox {
                 margin-bottom: 20px;
+                
             }
             .main-cointainer--form_btn {
                 display: flex;
                 justify-content: center;
+                font-family: 'Fredoka One', sans-serif;
             }
 
             .main-cointainer--form_btn-sb{
@@ -256,6 +268,7 @@
                 transition: all .1s;
                 font-size: 16px;
                 margin-top: 20px;
+                font-family: 'Fredoka One', sans-serif;
             }
 
 
@@ -279,13 +292,16 @@
                 height: 100%;
                 width: 100%;
                 border-radius: 100px;
+                font-family: 'Fredoka One', sans-serif;
 
             }
             .reviews-header{
                 margin-bottom: 20px;
+                font-family: 'Fredoka One', sans-serif;
             }
             .reviews-p-first{
                 margin-bottom: 50px;
+                font-family: 'Fredoka One', sans-serif;
             }
 
 
@@ -309,6 +325,7 @@
 
             .activity--container-main-greetings-h{
                 font-size: 30px;
+                font-family: 'Fredoka One', sans-serif;
             }
 
             .activity--container-main-section{
@@ -325,6 +342,7 @@
                 border-radius: 20px;
                 box-shadow: 10px 10px 20px black;
                 background-color: #fff;
+                font-family: 'Fredoka One', sans-serif;
 
             }
 
@@ -336,10 +354,12 @@
 
             .activity--container-main-h{
                 margin-bottom: 20px;
+                font-family: 'Fredoka One', sans-serif;
             }
 
             .activity--container-main-p{
                 padding: 20px;
+                font-family: 'Fredoka One', sans-serif;
             }
 
 
