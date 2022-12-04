@@ -68,7 +68,7 @@
                 color: #3A4B86;
                 font-size: 50px;
             }
-            
+
             .adopth2{
                 font-family: 'Merriweather', serif;
                 padding-top: 20px;
@@ -138,10 +138,10 @@
         </style>
     </head>
     <?php
-        include('nav.php');
-        ?>
+    include('nav.php');
+    ?>
     <body>
-        
+
         <div id="dogCareHero">
             <div id="dogCareHeroText">
                 <h1 id="dogCareTitle">Dog Care Center</h1>
@@ -303,23 +303,21 @@
                 });
                 infoWindow = new google.maps.InfoWindow();
 
-                //create a button for each resource
-                //vet button
                 const vetButton = document.createElement("button");
                 vetButton.textContent = "Vet";
-                //groomer button
+
                 const groomerButton = document.createElement("button");
                 groomerButton.textContent = "Groomers";
-                //dog park button
+
                 const parkButton = document.createElement("button");
                 parkButton.textContent = "Dog Parks";
-                //shelter button
+
                 const shelterButton = document.createElement("button");
                 shelterButton.textContent = "Shelters";
-                //breeder button
+
                 const breederButton = document.createElement("button");
                 breederButton.textContent = "Breeders";
-                //store button
+
                 const storeButton = document.createElement("button");
                 storeButton.textContent = "Stores";
 
@@ -337,8 +335,6 @@
                 map.controls[google.maps.ControlPosition.TOP_CENTER].push(breederButton);
                 map.controls[google.maps.ControlPosition.TOP_CENTER].push(storeButton);
 
-
-                //get users location
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function (position) {
                         pos = {
@@ -361,8 +357,6 @@
 
                 infowindow = new google.maps.InfoWindow();
 
-
-                //create button onclicks
                 groomerButton.addEventListener("click", () => {
                     clearOverlays();
                     query = "dog grooming";
@@ -400,7 +394,6 @@
                 });
             }
 
-        //clear previous markers
             function clearOverlays() {
                 for (var i = 0; i < markersArray.length; i++) {
                     markersArray[i].setMap(null);
@@ -476,10 +469,9 @@
                 });
                 return marker;
             }
-        </script>
-        
+        </script> 
     </body>
     <?php
-        include('footer.php');
-        ?>
+    include('footer.php');
+    ?>
 </html>
