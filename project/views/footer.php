@@ -3,7 +3,7 @@
         
         <style>
 
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@400;500;600;700&display=swap');
 
             :root {
                 --lightblue: #B9DEE7;
@@ -12,6 +12,7 @@
                 --buttonafter: #60100B;
                 --hovercolor: #253DA1;
                 --fontcolor: #FFFFFF;
+                --newbck: rgba(0, 111, 230, 0.646);
             }
 
 
@@ -19,27 +20,18 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Fredoka One', sans-serif;
             }
+            
             .body__footer{
                 display: grid;
-                justify-content: end;
-                align-content: end;
-                
-
+                align-content: center;
             }
             .footer{
-                background-color: var(--lightblue);
-
-                
+                background-color: var(--newbck);
 /*                height: auto;*/
-
-
-                
-
                 padding: 50px 80px;
-                width: 100%;
-
+                max-width: 100%;     
             }
             .footer_logo{
                 height: 60px;
@@ -50,8 +42,11 @@
                 width: 100%;
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
-                grid-gap: 90px;
+                
 
+            }
+            .aboutus{
+                padding: 0 35px;
             }
 
             .aboutus_h{
@@ -101,7 +96,8 @@
             }
 
             .aboutus_a:hover{
-                color: red;
+                color: var(--button);
+                background: rgba(0, 111, 230, 0.646);
             }
 
             .links{
@@ -154,7 +150,7 @@
                 text-align: center;
                 color: var(--fontcolor);
             }
-
+            
 
             @media (max-width: 800px) {
 
@@ -172,11 +168,10 @@
                     <div class="aboutus">
                         <h2 class="aboutus_h">About us</h2>
                         <p class="aboutus_p">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, 
-                            asperiores explicabo ipsam animi accusantium. Possimus, quas at nobis deleniti ab aut 
-                            ipsa illo veniam, quis odit in quidem quae.</p>
+                            We are a group of four aspiring software engineers built
+                            this project for a Class Project. Let us know your thoughts about this project.</p>
                         <ul class="aboutus_ul">
-                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/profile.php?id=100087791181706"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="aboutus_li"><a class="aboutus_a" href="https://www.facebook.com/people/Find-A-Fido/100087791181706/"><i class="fab fa-facebook-f"></i></a></li>
                             <li class="aboutus_li"><a class="aboutus_a" href="https://www.instagram.com/find_a_fido/"><i class="fab fa-instagram"></i></a></li>
                             <li class="aboutus_li"><a class="aboutus_a" href="https://www.twitter.com/find_a_fido/"><i class="fab fa-twitter"></i></a></li>
                         </ul>    
@@ -188,7 +183,7 @@
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/home_controller.php">Home</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/breed_info_controller.php">Dog Breed</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/dog_care_controller.php">Dog Care</a></li>
-                            <li class="footer_lists"><a class="footer_tags" href="../controllers/reviews_controller.php">Reviews</a></li>
+                            <li class="footer_lists"><a class="footer_tags" href="../controllers/reviews_controller.php">Dog Blog</a></li>
                             <li class="footer_lists"><a class="footer_tags" href="../controllers/about_us_controller.php">About Us</a></li>
 
 

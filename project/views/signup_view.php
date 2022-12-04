@@ -95,21 +95,18 @@
                 font-family: 'Fredoka', sans-serif;
                 cursor: pointer;
             }
- 
+
             #alreadyHaveAccount{
                 text-align: center;
                 font-style: italic;
                 color: rgb(43, 60, 133);
                 font-family: 'Fredoka', sans-serif;
             }
-
-
-
         </style>
     </head>
     <?php
-                include('nav.php');
-                ?>
+    include('nav.php');
+    ?>
     <body>
         <div class="loginContainer">
             <section class="createAccount">
@@ -120,30 +117,27 @@
                     echo $message;
                 }
                 ?>
-                
-                    <form action="../controllers/signup_controller.php" method="post">
-                        
-                        <label class="nameAlign loginLabels" for="name">Name:</label><br>
-                        <input class="it loginInput" type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
-                        <label class="emailAlign loginLabels" for="email">Email:</label><br>
-                        <input class="it loginInput" type="text" id="email" name="email" placeholder="Enter your email" required><br>
+                <form action="../controllers/signup_controller.php" method="post">
+                    <label class="nameAlign loginLabels" for="name">Name:</label><br>
+                    <input class="it loginInput" type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
-                        <label class="passwordAlign loginLabels" for="password">Password:</label><br>
-                        <input class="it loginInput" type="password" id="password" name="password" placeholder="Enter your password" required><br>
+                    <label class="emailAlign loginLabels" for="email">Email:</label><br>
+                    <input class="it loginInput" type="text" id="email" name="email" placeholder="Enter your email" required><br>
 
-                        <input type="hidden" name="action" value="create_account">
-                        <input class="button loginInput" type="submit" value="Submit">
-                        
-                    </form>
-                
+                    <label class="passwordAlign loginLabels" for="password">Password:</label><br>
+                    <input class="it loginInput" type="password" id="password" name="password" placeholder="Enter your password" required><br>
+
+                    <input type="hidden" name="action" value="create_account">
+                    <input class="button loginInput" type="submit" value="Submit">
+                </form>
+
                 <p id="alreadyHaveAccount">Already have an account? <a href="../views/login_view.php">Login!</a></p>      
-                
+
             </section>
-        </div>
-        
+        </div>      
     </body>
     <?php
-        include('footer.php');
-        ?>
+    include('footer.php');
+    ?>
 </html>

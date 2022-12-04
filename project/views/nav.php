@@ -2,7 +2,7 @@
         <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
         <style>
 
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:wght@400;500;600;700&display=swap');
 
             :root {
                 --lightblue: #B9DEE7;
@@ -10,6 +10,8 @@
                 --button: #A91B0D;
                 --buttonafter: #60100B;
                 --hovercolor: #253DA1;
+                --newbck: rgba(0, 111, 230, 0.646);
+                #B9DEE7
             }
 
 
@@ -17,18 +19,20 @@
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Fredoka One', sans-serif;
             }
 
 
             .header{
                 width: 100%;
                 height: 120px;
-                background-color: var(--lightblue);
+                background-color: var(--newbck);
+/*                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
+                    rgba(0, 62, 128, 0.405))*/
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border-radius: 20px;
+/*                border-radius: 20px;*/
                 padding: 0 100px;
 
             }
@@ -57,6 +61,7 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                
             }
 
             .nav__items{
@@ -79,6 +84,7 @@
                 background-color: var(--hovercolor);
                 padding: 8px 10px;
                 border-radius: 10px;
+                font-family: 'Fredoka One', sans-serif;
                 
             }
 
@@ -158,7 +164,7 @@
                     align-items: center;
                 }
                 .checkbtn{
-                    display: block;
+                    display: none;
                     height: 20px;
                     padding-right: 50px;
 

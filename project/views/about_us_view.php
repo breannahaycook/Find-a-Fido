@@ -55,7 +55,6 @@
                 flex-direction: column;
                 justify-content:end;
                 width: 500px
-
             }
 
             .bio{
@@ -142,6 +141,7 @@
                 </p>
             </div>
 
+
             <!--Kaitlyn-->
             <div id="kh" class="imageItem">
                 <a class="prev" onclick="nextImage(-1, 'kh', kh)">&#10094;</a>
@@ -200,8 +200,9 @@
             //breanna
             let bh0 = "url(../utility/assets/breanna1.jpg)";
             let bh1 = "url(../utility/assets/breanna2.jpg";
-            let bh2 = "url(../utility/assets/breanna3.png";
+            let bh2 = "url(../utility/assets/breanna3.png";         
             const bh = [bh0, bh1, bh2, 0];
+            
             //kaitlyn
             let kh0 = "url(../utility/assets/kaitlyn1.jpg)";
             let kh1 = "url(../utility/assets/kaitlyn2.jpg";
@@ -224,9 +225,7 @@
                 }
                 document.getElementById(name).style.backgroundImage = array[array[3]];
             }               
+
         </script>
-
-
     </body>
-
 </html>
