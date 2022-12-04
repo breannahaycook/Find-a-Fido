@@ -13,17 +13,32 @@
                 display: grid;
                 grid: 500px 500px 500px 500px / auto auto;
                 gap: 70px;
-                padding: 100px;
+                padding: 75px;
                 justify-content: center;
             }
 
             .imageItem{
-                background-image: url("../utility/assets/Dooberman.jpg");
                 background-position: center;
                 background-size: cover;
                 border-radius: 50px;
                 width: 500px;
                 height: 500px;
+            }
+            
+            #bh{
+                background-image: url("../utility/assets/breanna1.jpg");
+            }
+            
+            #kh{
+                background-image: url("../utility/assets/kaitlyn1.jpg");
+            }
+            
+            #rh{
+                
+            }
+            
+            #tb{
+                background-image: url("../utility/assets/tahreem1.jpg");
             }
 
             h1{
@@ -59,6 +74,7 @@
             }
 
             hr{
+                margin: auto;
                 width: 75%;
             }
 
@@ -68,6 +84,7 @@
                 font-family: 'Roboto', sans-serif;
                 font-size: 20px;
                 font-style: normal;
+                padding:20px;
             }
 
             .aboutUsTitle{
@@ -103,7 +120,6 @@
     include('nav.php');
     ?>
     <body>
-
         <h1 class="aboutUsTitle">About Us</h1>
         <p class="aboutUsBio">Our goal as Team Fido’s Friends is to help aspiring dog owners find the dog breed that
             best suits their lifestyle. <br> Meet our developers and their own furry friends below!</p>
@@ -114,7 +130,6 @@
                 <a class="prev" onclick="nextImage(-1, 'bh', bh)">&#10094;</a>
                 <a class="next" onclick="nextImage(1, 'bh', bh)">&#10095;</a>
             </div>
-
             <div class="bioItem">
                 <h2 class="aboutUsName">Breanna Haycook</h2>
                 <p class="bio">
@@ -126,26 +141,28 @@
                 </p>
             </div>
 
-            <!--Kaitlyn Howell-->
-            <div class="imageItem">
-                <a class="prev" onclick="">&#10094;</a>
-                <a class="next" onclick="">&#10095;</a>
+
+            <!--Kaitlyn-->
+            <div id="kh" class="imageItem">
+                <a class="prev" onclick="nextImage(-1, 'kh', kh)">&#10094;</a>
+                <a class="next" onclick="nextImage(1, 'kh', kh)">&#10095;</a>
             </div>
             <div class="bioItem">
-                <h1 class="aboutUsName">Kaitlyn Howell</h1>
+                <h2 class="aboutUsName">Kaitlyn Howell</h2>
+                <br>
                 <p class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+                    Hello! My name is Kaitlyn and i'm an aspiring web developer currently enrolled in my last semester at Oakland 
+                    Community College studying for my AAS in software engineering! As an animal lover this was an exciting project to end my 
+                    degree on, and I really hope you enjoy it!
+                    <br><br>
+                    Photos: Me with my cat George, me with my cat Miles, and my cat Milo.
                 </p>
             </div>
 
-            <!--Rafiul Hassan-->
-            <div class="imageItem">
-                <a class="prev" onclick="">&#10094;</a>
-                <a class="next" onclick="">&#10095;</a>
+            <!--Rafiul-->
+            <div id="rh" class="imageItem">
+                <a class="prev" onclick="nextImage(-1, 'rh', rh)">&#10094;</a>
+                <a class="next" onclick="nextImage(1, 'rh', rh)">&#10095;</a>
             </div>
             <div class="bioItem">
                 <h2 class="aboutUsName">Rafiul Hassan</h2>
@@ -158,10 +175,10 @@
                 </p>
             </div>
 
-            <!--Tahreem Bhatti-->
-            <div class="imageItem">
-                <a class="prev" onclick="">&#10094;</a>
-                <a class="next" onclick="">&#10095;</a>
+            <!--Tahreem-->
+            <div id="tb" class="imageItem">
+                <a class="prev" onclick="nextImage(-1, 'tb', tb)">&#10094;</a>
+                <a class="next" onclick="nextImage(1, 'tb', tb)">&#10095;</a>
             </div>
             <div class="bioItem">
                 <h2 class="aboutUsName">Tahreem Bhatti</h2>
@@ -174,17 +191,31 @@
                 </p>
             </div>
         </div>
-
+        
         <?php
         include('footer.php');
         ?>
 
         <script>
-            let bh0 = "url(../utility/assets/Dooberman.jpg)";
-            let bh1 = "url(../utility/assets/Husky.jpg";
-            let bh2 = "url(../utility/assets/Bolognese.jpg";
+            //breanna
+            let bh0 = "url(../utility/assets/breanna1.jpg)";
+            let bh1 = "url(../utility/assets/breanna2.jpg";
+            let bh2 = "url(../utility/assets/breanna3.png";         
             const bh = [bh0, bh1, bh2, 0];
-
+            
+            //kaitlyn
+            let kh0 = "url(../utility/assets/kaitlyn1.jpg)";
+            let kh1 = "url(../utility/assets/kaitlyn2.jpg";
+            let kh2 = "url(../utility/assets/kaitlyn3.jpg";
+            const kh = [kh0, kh1, kh2, 0];
+            //rafiul
+            
+            //tahreem
+            let tb0 = "url(../utility/assets/tahreem1.jpg)";
+            let tb1 = "url(../utility/assets/tahreem2.jpg";
+            let tb2 = "url(../utility/assets/tahreem3.jpg";
+            const tb = [tb0, tb1, tb2, 0];
+            
             function nextImage(num, name, array) {
                 array[3] = array[3] + num;
                 if (array[3] > 2) {
@@ -193,7 +224,8 @@
                     array[3] = 2;
                 }
                 document.getElementById(name).style.backgroundImage = array[array[3]];
-            }             
+            }               
+
         </script>
     </body>
 </html>
