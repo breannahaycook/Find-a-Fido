@@ -120,11 +120,10 @@
             border-radius: 70px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
             font-family: 'Roboto', sans-serif;
-            height: 60%;
-            width: 70vw;
-            min-width: 600px;
+            padding: 0 5rem;
+            margin: 0 auto;
+            
         }
-
 
         table {
             width: 100%;
