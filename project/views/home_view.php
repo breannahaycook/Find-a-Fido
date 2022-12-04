@@ -175,13 +175,13 @@
 
             /* ----------------CSSSS div main section container--------------------- */
             .container-bck-main{
-                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.553),
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.053),
                     rgba(0, 62, 128, 0.334)),
-                    url();
+                    url(../utility/assets/whiteBonePawPrintsBG.jpg);
 
             }
             .main-cointainer {
-                background-image: linear-gradient(to left bottom, rgba(0, 111, 230, 0.653),
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
                     rgba(0, 62, 128, 0.334)),
                     url();
 
@@ -311,7 +311,7 @@
             .activity--container-main{
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.621),
                     rgba(0, 62, 128, 0.384)),
-                    url(../utility/assets/whiteDogsBG.jpeg);
+                    url(../utility/assets/breeder.jpg);
                 padding: 30px;
                 background-size: cover;
                 background-position: center;
