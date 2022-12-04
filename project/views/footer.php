@@ -45,6 +45,9 @@
                 
 
             }
+            .aboutus{
+                padding: 0 35px;
+            }
 
             .aboutus_h{
                 position: relative;
