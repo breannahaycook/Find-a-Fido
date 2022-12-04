@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="boneBackground">
 
     <head>
         <meta charset="UTF-8">
@@ -8,273 +8,290 @@
         <script src="https://kit.fontawesome.com/804adbe216.js" crossorigin="anonymous"></script>
         <title>Reviews | Find-A-Fido</title>
         
-        <style>
-
-
-            :root {
-
-                --header_color: blue;
-                --review_box_color: ;
-                --review_sec_color: ;
-                --button_color: rgba(0, 153, 255, 0.413);
-                --button_font: black;
-
-
+        <style> 
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+            
+            .aboutReviews {
+                text-align: center;
+                color: rgb(102, 102, 102);
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-style: normal;
             }
-
-
-            * {
-
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-
+            
+            .boneBackground{
+                background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
             }
-
-
-            .header--main {
-                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.951),
-                    rgba(0, 62, 128, 0.279)),
-                    url(..);
-                color: beige;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 80px;
-
+            
+            .button{
+                background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                border-radius: 5px;
+                color: white;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                height: 30px;
+                letter-spacing: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
             }
-
-            .header--main-greetings {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-
-            .header--main-greetings-h {
-                padding: 20px 60px;
-                font-size: 2.5rem;
-
-            }
-
-            .header--main-greetings-h2 {
-                padding: 15px 60px;
-                font-size: 1.3rem;
-            }
-
-            .main--reviews-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 80px;
-                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.951),
-                    rgba(0, 62, 128, 0.279)),
-                    url(./pictures/whiteDogsBG.jpeg);
-
-
-            }
-
-            .main--reviews-first-container {
+            
+            .commentSection {
                 background-color: white;
-                /* -----add gradient------ */
-                padding: 30px;
-                border-radius: 30px;
-                box-shadow: 2px 2px 8px black;
-                text-align: left;
-
+                border-radius: 70px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                font-family: 'Roboto', sans-serif;
+                height: 60%;
+                width: 45vw;
+                margin-top: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 600px;
             }
-
-            .main--reviews-first-container-box{
-
-                padding: 30px;
-                border-radius: 30px;
-            }
-
-            .main--reviews-first-container-h {
-                margin-bottom: 20px;
-                font-size: 1.4rem;
-                text-decoration: underline;
-
-
-            }
-
-            .main--reviews-first-container-p {
-                font-size: 1.1rem;
-                margin-bottom: 15px;
-            }
-
-            .main--reviews-first-container-input-container {
+            
+            .container {
+                align-items: center;
                 display: flex;
-                justify-content: left;
-                /* align-items: bottom; */
-                margin-bottom: 5px;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .deleteButton {
+                background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                border-radius: 5px;
+                color: white;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                height: 30px;
+                letter-spacing: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: block; 
+                margin: 0 auto;
+            }
+            
+            .dogImage {
+                height: 300px;
+                width: 400px;
+            }
+            
+            h1 {
+                color: rgb(60, 77, 156);
+                font-family: 'Fredoka', sans-serif;
+                font-size: 50px;
+                letter-spacing: 1px;
+                text-align: center;
+                text-shadow: 0px 3px 2px rgb(201, 201, 201);
+            }
+            
+            h2 {
+                color: rgb(60, 77, 156);
+                margin-left: 20px;
             }
 
-            .main--reviews-first-container-p-name {
-                margin: 0px 5px 0 0;
-                margin-bottom: 5px;
-
-
+            h4 {
+                color: rgb(60, 77, 156);
+                font-family: 'Roboto', sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                margin-top: 30px;
+                margin-right: 30px;
+                text-align: right;
             }
 
-            .main--reviews-first-container-textarea-container {
-                display: block;
-                position: relative;
-                margin-bottom: 15px;
-
+            h5 {
+                color: rgb(60, 77, 156);
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                font-style: normal;
+                margin: 30px;
             }
 
-            .main--reviews-first-container-textarea-comment {
-                height: 150px;
-                width: 440px;
+            hr {
+                width: 85%;
+                margin: auto;
+            }
+            
+            form {
+                text-align: center;
+            }
+            
+            .para {
+                color: rgb(43, 60, 133);
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                margin: 30px;
+                text-align: center;
+            }
+            
+            section {
+                background-color: white;
+                border-radius: 70px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                font-family: 'Roboto', sans-serif;
+                height: 60%;
+                width: 70vw;
+                margin-top: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 600px;
+            }
+            
+            .textArea {
+                border: 1px solid rgb(43, 60, 133);
+                border-radius: 5px;
+                height: 250px;
+                text-align: center;
+                width: 400px;
+            }
+            
+            .title {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .reviewPara {
+                color: rgb(43, 60, 133);
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                margin: 30px;
+                text-align: center;
+                width: 65vw;
             }
 
-            .main--reviews-first-container-textarea-name {
-                margin-bottom: 8px;
+            .reviewsTitle {
+                font-size: 60px;
             }
-
-            .main--reviews-second-container-button {
-                height: 40px;
-                width: 120px;
-                border-radius: 19px;
-                background-color: var(--button_color);
-                color: var(--button_font);
-
-            }
-
-            .main--reviews-second-container-button:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 1px 10px black;
-            }
-
-
-            .main--reviews-second-container-button:active {
-                transform: translateY(-1px);
-                box-shadow: 0 1px 10px black;
-
-            }
-
-
         </style>
 
     </head>
-    
-    
     <?php
-    include('nav.php');
+        include('nav.php');
     ?>
-    
-    
     <body>
-
-
         <main>
-
-
-            <section class="header--main">
-
-                <div class="header--main-greetings">
-
-                    <h1 class="header--main-greetings-h">
-                        Reviews!
-                    </h1>
-
-                    <h3 class="header--main-greetings-h2">
-                        Welcome to our review section, here our valued members has left their thoughts about their new
-                        friend!
-                    </h3>
-
-                </div>
-
-            </section>
-
-            <section class="main--reviews-container">
-
-                <div class="main--reviews-first-container">
-
+            <div class="title">
+                <h1 class="reviewsTitle">Dog Blog</h1>
+                <p class="aboutReviews">
+                    This page is to showcase our users written reviews and experiences for dog breeds! <br> Login to leave your own personal comments about your fur babies!
+                </p>
+                <br>
+                <hr>
+            </div>
+            <div class="container">
+                <section class="commentSection">
+                    <h1>Write A Review:</h1>
+                    <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ ?> 
                     <form action="../controllers/reviews_controller.php" method="post">
-
-                        <div class="main--reviews-first-container-box">
-
-                            <h2 class="main--reviews-first-container-h"> Write A Review:</h2>
-
-                            <p class="main--reviews-first-container-p">Please select which breed you would like to leave a
-                                review on.</p>
-
-                            <?php include('../utility/breed_list_drop_down.php'); ?>
-
-                            <div class="main--reviews-first-container-input-container">
-                                <p class="main--reviews-first-container-p-name">Username:</p>
-
-                              
-                                <input class="main--reviews-first-container-p-name" type="text" name="username" placeholder="Username."/>
-                            </div>
-
-
-                            <div class="main--reviews-first-container-textarea-container">
-
-                                <p class="main--reviews-first-container-textarea-name">Share your experience:</p>
-
-                                <textarea class="main--reviews-first-container-textarea-comment" name="review"
-                                          placeholder="Write your comment about your experience! "></textarea><br>
-
-                            </div>
-
-                            <input type="hidden" name="action" value="create_review">
-                            <input class="main--reviews-second-container-button" type="submit" value="Create Review">
-
-                        </div>
-                        
-
-                </div>
-                
-            </section>
-
-            <!-- Did not touch this section yet -->
-            <section class="customer--review-main-container">
-
-                <div class="customer--review-container">
-
-                    <form action="../controllers/reviews_controller.php" method="post">
-                        <?php include('../utility/breed_list_drop_down.php') ?>
-                        <label>&nbsp;</label>
-                        <input type="hidden" name='action' value="filter_reviews" />
-                        <input type="submit" value="Filter Reviews"><br>
+                        <br>
+                        <p class="para">Please select which breed you would like to leave a review on: <?php include('../utility/breed_list_drop_down.php'); ?></p>
+                        <textarea class="textArea" name="review" placeholder="Write your comment about your experience here!"></textarea><br>
+                        <input type="hidden" name="action" value="create_review">
+                        <input class="button" type="submit" value="Create Review">
                     </form>
+                    <?php } else { ?>
+                    <p class="para">
+                        <img class="dogImage" src="../utility/assets/smallDogs.jpg" alt="Image of two small dogs."/>
+                        <br>
+                        <br>
+                        <a href="../controllers/login_controller.php">
+                            Click to Login into an existing account or Sign up as a new user to leave a review!
+                        </a>
+                    </p>
+                    <?php } ?>
                     <br>
+                    <br>
+                </section>
+            </div>
 
+            <div class="title">
+                <br>
+                <hr>
+                <form action="../controllers/reviews_controller.php" method="post">
+                    <p class="para">Would you like to read reviews about a particular breed? <br> Select a breed from the drop down to view all of the reviews.</p>
+                    <?php include('../utility/breed_list_drop_down.php') ?>
+                    <label>&nbsp;</label>
+                    <input type="hidden" name='action' value="filter_reviews" />
+                    <input class="button" type="submit" value="Filter Reviews"><br>
+                </form>
+                <br>
+                <hr>
+                <h1>Reviews:</h1>
+                <br>
+            </div>
+            
 
+            <?php if ($reviews !== []) {
+                foreach ($reviews as $review) : ?>
+                    <section>
                     <table>
-                        <?php foreach ($reviews as $review) : ?>
-                            <tr>
-                                <td>
-                                    <?php
-                                    $id = $review->get_user_id();
-                                    echo $id;
+                        <tr>
+                            <td>
+                                <h4><?php echo $review->get_breed(); ?></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2>
+                                    <?php 
+                                        $id = $review->get_user_id();
+                                        $user_name = get_user_by_id($id); 
+                                        echo $user_name[0] . ",";
                                     ?>
-                                </td>
-                                <td>
-    <?php echo $review->get_breed(); ?>
-                                </td>
-                                <td>
-    <?php echo $review->get_review(); ?>
-                                </td>
-                                <td>
-    <?php echo $review->get_timestamp(); ?>
-                                </td>
-                            </tr>
-<?php endforeach; ?>
+                                </h2>
+                                <p class="reviewPara">
+                                    <?php echo $review->get_review(); ?>
+                                </p>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>
+                                    <?php echo $review->get_timestamp(); ?>
+                                </h5>
+                                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){ 
+                                    if($_SESSION['id'] == $id) { 
+                                        $id = $review->get_id();?> 
+                                        <form action="../controllers/reviews_controller.php" method="post">
+                                            <input type="hidden" name='id' value="<?php echo $id; ?>" />
+                                            <button class="deleteButton" name='action' value="delete" >Delete Review</button>
+                                        </form>
+                                        <br>
+                                    <?php }
+                                } ?>
+                            </td>
+                        </tr>
                     </table>
-
+                <br>
+                </section>
+            <?php endforeach; } else { ?>
+                <div class="container">
+                    <section>
+                        <h1>Oh No..</h1>
+                        <p class="para">There are no reviews that match your search, please try again.</p>
+                        <img src="../utility/assets/dogWithBows.jpg" alt="Picture of three dogs with bows">
+                        <p class="para">
+                            Don't forget to check out our Find-A-Fido Survey!
+                            You enter a little information and we will make the perfect match!
+                            <br>
+                            <a href="../controllers/home_controller.php">Click here to Find-A-Fido!</a>
+                            <br>
+                        </p>
+                    </section>
                 </div>
-
-            </section>
-
+            <?php } ?>
+            <br>
         </main>
-
-
     </body>
     <?php
-    include('footer.php');
+        include('footer.php');
     ?>
 </html>

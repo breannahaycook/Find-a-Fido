@@ -86,14 +86,6 @@
                 margin: auto;
             }
 
-            img {
-                display: block;
-                height: 275px;
-                width: 300px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
             label {
                 font-size: 13px;
             }
@@ -104,7 +96,6 @@
                     'header header header'
                     'sideNav container container'
                     'breedInfoFooter breedInfoFooter breedInfoFooter';    
-                margin-left:0px;
             }
 
             .notchecked {

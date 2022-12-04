@@ -67,7 +67,7 @@ function get_breed_reviews_by_name($breed) {
     global $database;
     
     // reads breed review info by breed name
-    $reviews_query = 'SELECT user_id, review, timestamp, id FROM breed_review WHERE breed = :breed';
+    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review WHERE breed = :breed';
     $reviews_statement = $database->prepare($reviews_query);
     $reviews_statement->bindValue(":breed", $breed);
     $reviews_statement->execute();
@@ -77,7 +77,7 @@ function get_breed_reviews_by_name($breed) {
     $reviews_array = array();
     
     foreach($reviews as $review) {
-        $reviews_array[] = new Review($review['user_id'], $review['review'], $review['timestamp'], $review['id']);
+        $reviews_array[] = new Review($review['user_id'], $review['breed'], $review['review'], $review['timestamp'], $review['id']);
     }
     
     return $reviews_array;
