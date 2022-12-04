@@ -17,7 +17,6 @@
                 justify-content: center;
             }
 
-
             .imageItem{
                 background-image: url("../utility/assets/Dooberman.jpg");
                 background-position: center;
@@ -25,7 +24,6 @@
                 border-radius: 50px;
                 width: 500px;
                 height: 500px;
-
             }
 
             h1{
@@ -42,7 +40,6 @@
                 flex-direction: column;
                 justify-content:end;
                 width: 500px
-
             }
 
             .bio{
@@ -76,7 +73,6 @@
             .aboutUsTitle{
                 font-size: 60px;
             }
-
 
             .prev, .next {
                 cursor: pointer;
@@ -130,7 +126,6 @@
                 </p>
             </div>
 
-
             <!--Kaitlyn Howell-->
             <div class="imageItem">
                 <a class="prev" onclick="">&#10094;</a>
@@ -178,7 +173,6 @@
                     id est laborum.
                 </p>
             </div>
-
         </div>
 
         <?php
@@ -186,8 +180,6 @@
         ?>
 
         <script>
-            //works best if everyone has the same amount of images
-            //will need to alter code if various numbers
             let bh0 = "url(../utility/assets/Dooberman.jpg)";
             let bh1 = "url(../utility/assets/Husky.jpg";
             let bh2 = "url(../utility/assets/Bolognese.jpg";
@@ -201,12 +193,7 @@
                     array[3] = 2;
                 }
                 document.getElementById(name).style.backgroundImage = array[array[3]];
-            }
-            
-            
+            }             
         </script>
-
-
     </body>
-
 </html>

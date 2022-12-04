@@ -9,7 +9,6 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-            /* login flex container */
             .loginContainer {
                 display: flex;
                 background-image: url("../utility/assets/whiteDogsBG.jpeg");
@@ -97,7 +96,7 @@
                 font-family: 'Fredoka', sans-serif;
                 cursor: pointer;
             }
- 
+
             #dontHaveAccount{
                 text-align: center;
                 font-style: italic;
@@ -107,10 +106,10 @@
         </style>
     </head>
     <?php
-        include('nav.php');
-        ?>
+    include('nav.php');
+    ?>
     <body>
-        
+
         <div class="loginContainer">
             <section class="createAccount">
                 <h1 class="loginh1">Login</h1>
@@ -135,9 +134,8 @@
 
             </section>
         </div>
-        
     </body>
     <?php
-        include('footer.php');
-        ?>
+    include('footer.php');
+    ?>
 </html>
