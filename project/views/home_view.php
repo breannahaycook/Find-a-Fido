@@ -45,7 +45,7 @@
 
 
             .header__section {
-                height: 100vh;
+                height: 94vh;
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
                     rgba(0, 62, 128, 0.405)),
                     url(../utility/assets/whiteDogsBG.jpeg);
@@ -175,7 +175,7 @@
 
             /* ----------------CSSSS div main section container--------------------- */
             .container-bck-main{
-                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
+                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.553),
                     rgba(0, 62, 128, 0.334)),
                     url();
 
@@ -315,6 +315,8 @@
                 padding: 30px;
                 background-size: cover;
                 background-position: center;
+                max-width: 1400px;
+                margin: 0 auto;
 
             }
 
@@ -331,6 +333,7 @@
             .activity--container-main-section{
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 gap: 50px;
                 max-width: auto;
             }
@@ -338,27 +341,34 @@
             .activity--container-main-section-block{
                 text-align: center;
                 margin: 20px 10px 20px 10px;
-                padding: 10px 20px;
+                padding: 30px 20px;
                 border-radius: 20px;
                 box-shadow: 10px 10px 20px black;
                 background-color: #fff;
                 font-family: 'Fredoka One', sans-serif;
+                background-color: #cce2fa;
+                display: flex;
+                flex-direction: column;
+                height: 40%;
 
             }
 
             .activity--container-main-img{
-                width: 20vw;
+                width: 100%;
                 /* margin: 50px; */
                 padding: 50px;
+                margin: 0 auto;
             }
 
             .activity--container-main-h{
-                margin-bottom: 20px;
+                margin-bottom: 20px auto;
                 font-family: 'Fredoka One', sans-serif;
+                
+                
             }
 
             .activity--container-main-p{
-                padding: 20px;
+                padding: 20px 55px;
                 font-family: 'Fredoka One', sans-serif;
             }
 
@@ -654,7 +664,7 @@
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <img class="activity--container-main-img" src="../utility/assets/dog_breed.jpg" alt="picture of dog breed page">
                         <h1 class="activity--container-main-h">Dog Breed</h1>
                         <p class="activity--container-main-p">You can also select Breeds from our filter section to your desire needs!</p>
                         <a href="../controllers/breed_info_controller.php" class="btn btn-white">Dog Breed.</a>
@@ -663,7 +673,7 @@
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <img class="activity--container-main-img" src="../utility/assets/dog__care.jpg" alt="picture of dog breed page">
                         <h1 class="activity--container-main-h">Dog Care</h1>
                         <p class="activity--container-main-p">Concern about you Dog health we can help you find the local wets 
                             gromming, shredding and also to walk your dog around the park located next to your area.</p>
