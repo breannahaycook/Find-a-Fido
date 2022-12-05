@@ -81,9 +81,8 @@
             margin: auto;
         }
 
-        img {
+        .resultsImg {
             display: block;
-            border-radius: 50px;
             height: 275px;
             width: 300px;
             margin-left: auto;
@@ -114,15 +113,6 @@
             font-style: normal;
             margin: 30px;
             text-align: center;
-        }
-
-        .results {
-            border-radius: 50px;
-            display: block;
-            height: 250px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 200px;
         }
 
         section {
@@ -180,7 +170,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <img class="results" src="../utility/assets/<?php echo $breed_name; ?>.jpg" alt="Picture of a <?php echo $breed_name; ?>">
+                                        <img class="resultsImg" src="../utility/assets/<?php echo $breed_name; ?>.jpg" alt="Picture of a <?php echo $breed_name; ?>">
                                     </td>
                                     <td>
                                         <h4>Size:</h4> 
