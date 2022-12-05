@@ -34,7 +34,7 @@
             }
             
             #rh{
-                
+                background-image: url("../utility/assets/rafiul1.png");
             }
             
             #tb{
@@ -122,7 +122,7 @@
     <body>
         <h1 class="aboutUsTitle">About Us</h1>
         <p class="aboutUsBio">Our goal as Team Fido’s Friends is to help aspiring dog owners find the dog breed that
-            best suits their lifestyle. <br> Meet our developers and their own furry friends below!</p>
+            best suits their lifestyle. <br> Meet our developers and some of their own furry friends below!</p>
         <hr>
         <div class="gridContainer">
             <!--Breanna-->
@@ -132,15 +132,17 @@
             </div>
             <div class="bioItem">
                 <h2 class="aboutUsName">Breanna Haycook</h2>
+                <br>
                 <p class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+                    Hi Everyone, My name is Breanna! This has been such an exciting project for me as this touches home. I have been considering 
+                    adopting a dog and it’s always a thought about which dog breed would fit best with my lifestyle, as I have a small home, 
+                    but I am a very active person! This idea came up as a resolution to my issue to make sure my future fur baby and I will be 
+                    a perfect match. I hope it helps you as much as it helps me! 
+                    <br><br>
+                    Photos: Jake, the Husky who is our longtime family dog. Thumper, the Bunny who thinks he’s a tiny dog. Izzy, 
+                    the Tarantula who isn’t the easiest to take a selfie with.
                 </p>
             </div>
-
 
             <!--Kaitlyn-->
             <div id="kh" class="imageItem">
@@ -152,10 +154,12 @@
                 <br>
                 <p class="bio">
                     Hello! My name is Kaitlyn and i'm an aspiring web developer currently enrolled in my last semester at Oakland 
-                    Community College studying for my AAS in software engineering! As an animal lover this was an exciting project to end my 
-                    degree on, and I really hope you enjoy it!
+                    Community College studying for my AAS in software engineering! As an animal lover and someone who really wants a dog of their 
+                    own someday, this was an exciting project to end my degree on, and I really hope you enjoy it!
                     <br><br>
-                    Photos: Me with my cat George, me with my cat Miles, and my cat Milo.
+                    Photos: My grumpy adopted cat George and I (I was told he's named after a Grey's Anatomy character!), my furry other half Miles 
+                    (who is affectionately named after one of my favorite video game characters Miles Edgeworth from the Ace Attorney series), 
+                    and the brand new addition to my family, Milo!
                 </p>
             </div>
 
@@ -166,12 +170,11 @@
             </div>
             <div class="bioItem">
                 <h2 class="aboutUsName">Rafiul Hassan</h2>
+                <br>
                 <p class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+                    Hey everyone! I am Rafiul Hassan, I am a studying Computer Science in Oakland Community College. 
+                    I am on my Senior Year in my Associate degree Program. I cook happiness which is the one of my specialty I do on my 
+                    free times!!
                 </p>
             </div>
 
@@ -182,12 +185,11 @@
             </div>
             <div class="bioItem">
                 <h2 class="aboutUsName">Tahreem Bhatti</h2>
+                <br>
                 <p class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.
+                    Hello! My name is Tahreem Bhatti I am a software engineering student at Oakland community college. This is my Junior 
+                    year in college and I'll be done with my association in 2023. After that I'll apply in the Oakland university for further 
+                    studies.
                 </p>
             </div>
         </div>
@@ -209,7 +211,10 @@
             let kh2 = "url(../utility/assets/kaitlyn3.jpg";
             const kh = [kh0, kh1, kh2, 0];
             //rafiul
-            
+            let rh0 = "url(../utility/assets/rafiul1.png)";
+            let rh1 = "url(../utility/assets/rafiul2.png";
+            let rh2 = "url(../utility/assets/rafiul3.png";
+            const rh = [rh0, rh1, rh2, 0];
             //tahreem
             let tb0 = "url(../utility/assets/tahreem1.jpg)";
             let tb1 = "url(../utility/assets/tahreem2.jpg";
