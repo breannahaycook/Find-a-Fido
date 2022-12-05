@@ -48,7 +48,7 @@ function get_all_breed_reviews() {
     global $database;
     
     // reads breed review info
-    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review';
+    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review ORDER BY timestamp DESC';
     $reviews_statement = $database->prepare($reviews_query);
     $reviews_statement->execute();
     $reviews = $reviews_statement->fetchAll();
@@ -67,7 +67,7 @@ function get_breed_reviews_by_name($breed) {
     global $database;
     
     // reads breed review info by breed name
-    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review WHERE breed = :breed';
+    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review WHERE breed = :breed ORDER BY timestamp DESC';
     $reviews_statement = $database->prepare($reviews_query);
     $reviews_statement->bindValue(":breed", $breed);
     $reviews_statement->execute();
@@ -87,7 +87,7 @@ function get_breed_reviews_by_user_id($user_id) {
     global $database;
     
     // reads breed review info by user id
-    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review WHERE user_id = :user_id';
+    $reviews_query = 'SELECT user_id, breed, review, timestamp, id FROM breed_review WHERE user_id = :user_id ORDER BY timestamp DESC';
     $reviews_statement = $database->prepare($reviews_query);
     $reviews_statement->bindValue(":user_id", $user_id);
     $reviews_statement->execute();

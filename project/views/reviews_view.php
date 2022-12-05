@@ -12,6 +12,15 @@
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
             
+            a {
+                text-decoration: none;   
+            }
+            
+            a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            
             .aboutReviews {
                 text-align: center;
                 color: rgb(102, 102, 102);
@@ -37,6 +46,7 @@
                 letter-spacing: 1px;
                 padding-left: 10px;
                 padding-right: 10px;
+                margin: 5px;
             }
             
             .commentSection {
@@ -91,13 +101,14 @@
             }
             
             h2 {
+                font-family: 'Fredoka', sans-serif;
                 color: rgb(60, 77, 156);
                 margin-left: 20px;
             }
 
             h4 {
                 color: rgb(60, 77, 156);
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Fredoka', sans-serif;
                 font-size: 30px;
                 font-style: normal;
                 margin-top: 30px;
@@ -144,6 +155,16 @@
                 min-width: 600px;
             }
             
+            .sidenav {
+                color: #FFFFFF;
+                font-family: 'Fredoka', sans-serif;        
+                font-size: 16px;
+                overflow-x: hidden;
+                position: sticky;
+                top: 0; /* Stay at the top */
+                width: 10wh;
+            }
+            
             .textArea {
                 border: 1px solid rgb(43, 60, 133);
                 border-radius: 5px;
@@ -155,6 +176,22 @@
             .title {
                 width: 100%;
                 background-color: rgba(255, 255, 255, 0.5);
+            }
+            
+            .topButton{
+                background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
+                border-radius: 5px;
+                color: white;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 12px;
+                font-style: none;
+                height: 25px;
+                letter-spacing: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin: 5px;
             }
             
             .reviewPara {
@@ -216,11 +253,11 @@
                 <br>
                 <hr>
                 <form action="../controllers/reviews_controller.php" method="post">
-                    <p class="para">Would you like to read reviews about a particular breed? <br> Select a breed from the drop down to view all of the reviews.</p>
+                    <p class="para">Would you like to read reviews about a particular breed? <br> Select a breed from the drop down list to view the reviews for that breed.</p>
                     <?php include('../utility/breed_list_drop_down.php') ?>
                     <label>&nbsp;</label>
-                    <input type="hidden" name='action' value="filter_reviews" />
-                    <input class="button" type="submit" value="Filter Reviews"><br>
+                    <input class="button" type="submit" name="action" value="Filter Reviews">
+                    <input class="button" type="submit"  name="action" value="Clear Filters">
                 </form>
                 <br>
                 <hr>
@@ -228,7 +265,9 @@
                 <br>
             </div>
             
-
+            <div class="sidenav">
+                <button class="topButton"><a href="#top">Back to Top</a></button>
+            </div>
             <?php if ($reviews !== []) {
                 foreach ($reviews as $review) : ?>
                     <section>
@@ -244,7 +283,7 @@
                                     <?php 
                                         $id = $review->get_user_id();
                                         $user_name = get_user_by_id($id); 
-                                        echo $user_name[0] . ",";
+                                        echo "<h2>" . $user_name[0] . ", </h2>";
                                     ?>
                                 </h2>
                                 <p class="reviewPara">

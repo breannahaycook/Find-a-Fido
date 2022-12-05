@@ -11,7 +11,6 @@
                 --buttonafter: #60100B;
                 --hovercolor: #253DA1;
                 --newbck: rgba(0, 111, 230, 0.646);
-                #B9DEE7
             }
 
 
@@ -27,15 +26,12 @@
                 width: 100%;
                 height: 120px;
                 background-color: var(--newbck);
-/*                background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
-                    rgba(0, 62, 128, 0.405))*/
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-/*                border-radius: 20px;*/
                 padding: 0 100px;
-
             }
+            
             .nav__logo{
                 height: 105px;
                 border-radius: 25px;
@@ -48,33 +44,22 @@
             .hamburger{
                 display: none;
             }
-/*            .head{
-                font-size: 30px;
-
-            }
-            .head_f{
-                font-size: 40px;
-                color: blue;
-            }*/
 
             .nav__label{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                
             }
 
             .nav__items{
                 display: flex;
                 margin-right: 20px;
-
             }
 
             .nav__lists{
                 list-style: none;
                 text-transform: uppercase;
                 padding-right: 50px;
-
             }
 
 
@@ -85,7 +70,6 @@
                 padding: 8px 10px;
                 border-radius: 10px;
                 font-family: 'Fredoka One', sans-serif;
-                
             }
 
             .nav__tags:hover{
@@ -93,8 +77,8 @@
                 transition: all 0.5s ease-in-out;
                 border-radius: 50px;
                 color: black;
-
             }
+            
             .btn{
                 background-color: var(--button);
                 transition: all 0.5s ease-in-out;
@@ -179,37 +163,15 @@
                 .nav__items{
                     display: none;
                 }
-
-                /* .nav__items{
-                    width: 100%;
-                    height: 100vh;
-                    background-color: var(--lightblue);
-                    
-                    top: 80px;
-                }
-                .nav__lists{
-                    display: block;
-                    margin: 60px 0px;
-                } */
-
-
-
             }
+            
             @media screen and (max-width: 410px){
 
                 .checkbtn{
                     padding-left: 10px;
 
                 }
-                /*                .head{
-                                    font-size: 22px;
-                
-                                }
-                
-                                .head_f{
-                                    font-size: 22px;
-                                    color: blue;
-                                }*/
+
                 .nav__logo{
                     height: 80px;
                     border-radius: 25px;
@@ -244,13 +206,10 @@
                     .nav__lists{
                         padding-right: 15px;
                     }
-
-
-
-
+                    
+                }
         </style>
-        
-        
+
     <header class="header">
         <div class="nav__label">
             <img class="nav__logo" src="../utility/assets/Picture1.jpg" alt="Company Logo!">

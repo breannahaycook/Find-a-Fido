@@ -15,7 +15,6 @@
                 --newbck: rgba(0, 111, 230, 0.646);
             }
 
-
             *{
                 padding: 0;
                 margin: 0;
@@ -27,12 +26,13 @@
                 display: grid;
                 align-content: center;
             }
+            
             .footer{
                 background-color: var(--newbck);
-/*                height: auto;*/
                 padding: 50px 80px;
                 max-width: 100%;     
             }
+            
             .footer_logo{
                 height: 60px;
                 border-radius: 15px;
@@ -42,9 +42,8 @@
                 width: 100%;
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
-                
-
             }
+            
             .aboutus{
                 padding: 0 35px;
             }
@@ -69,7 +68,6 @@
             .aboutus_p{
                 color: var(--fontcolor);
                 line-height: 2;
-
             }
 
             .aboutus_ul{
@@ -107,7 +105,6 @@
 
             .footer_items{
                 list-style: none;
-
             }
 
             .footer_tags{
@@ -116,9 +113,8 @@
                 display: inline-block;
                 margin-bottom: 10px;
                 transition: all 0.1s ease-in;
-
-
             }
+            
             .footer_tags:hover{
                 color: var(--fontcolor);
                 background: var(--hovercolor);
@@ -128,7 +124,6 @@
 
             .contact_us{
                 position: relative;
-
             }
 
             .info_list{
@@ -136,7 +131,6 @@
                 grid-template-columns: 30px 1fr;
                 margin-bottom: 16px;
                 color: var(--fontcolor);
-
             }
 
             .info_a{
@@ -151,7 +145,6 @@
                 color: var(--fontcolor);
             }
             
-
             @media (max-width: 800px) {
 
                 .footer_bars{
