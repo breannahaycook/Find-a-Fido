@@ -93,6 +93,15 @@
             font-size: 15px;
         }
         
+        .message {
+            color: rgb(43, 60, 133);
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: bold;
+            margin: 30px;
+            text-align: center;
+        }
+        
         .notchecked {
             color: #D3d3d3;
         }
@@ -150,6 +159,11 @@
                     Thank you for taking our Find-A-Fido survey! Your results are listed below.<br> Feel free to retake our <a href='../controllers/home_controller.php'>SURVEY</a> if you would like to try for new results. <br> You can also visit our <a href='../controllers/breed_info_controller.php'>DOG BREED</a> page to browse through our lists for a specific 
                     breed.
                     requirements.
+                    <?php 
+                        if (isset($message) && $message != " ") {
+                            echo "<p class=\"message\">" . $message . "</p>";
+                        }
+                    ?>
                 </p>
                 <br>
                 <hr>
@@ -157,7 +171,6 @@
             <!-- Display Dog Info -->
             <?php 
             if(!empty($results)) {
-                
                 foreach($results as $breed_info) : ?>
                     <div class="container">
                         <section>
@@ -176,8 +189,6 @@
                                         <i id="sizeBone1" class='fas fa-bone checked'></i>
                                         <i id="sizeBone2" class='fas fa-bone <?php if ($size == "S") { echo "not"; } ?>checked'></i>
                                         <i id="sizeBone3" class='fas fa-bone <?php if ($size !== "L") { echo "not"; } ?>checked'></i>
-
-
 
                                         <h4>Grooming Needs:</h4>
                                         <?php $grooming = $breed_info-> get_grooming(); ?>

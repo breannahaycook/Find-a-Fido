@@ -20,6 +20,7 @@ try {
     $tags = [];
     $i = 0;
     
+    // applies filters from form and creates the WHERE statement
     if ($action != "Apply Filters") {
         $breeds = get_all_breeds();
     } else {
@@ -81,7 +82,7 @@ try {
             $statement = " WHERE " . $statement;
             $statement = rtrim($statement," AND ");
         }  
-        $breeds = filter_breeds($statement);
+        $breeds = get_breeds_by_filter($statement);
     }    
     
     include ('../views/dog_breed_view.php');
