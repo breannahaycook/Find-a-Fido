@@ -23,25 +23,28 @@ try {
             
             // login after create a new account
             if (login($email, $password)) {
-                
                 // if login was successful set $_SESSION variables
                 $_SESSION['logged_in'] = true;
-                
+
                 $user_info = get_user_by_email($email_address);
                 $_SESSION['email_address'] = $email_address;
                 $_SESSION['name'] = $user_info[0];
                 $_SESSION['id'] = $user_info[1];
-                
+
                 // return to home page
                 header("Location: ../controllers/home_controller.php");
             }
         } else {
-            $message = "New user connot be created at this time, please try again.<br>";
+            $message = "New user connot be created at this time, please try again.<br>Remember: Email address cannot be used for more than one account.";
         }
     }
+    
     include ('../views/signup_view.php');
+    
 } catch (Exception $e) {
     $error_message = $e->getMessage();
-    include('../views/error.php');
+    echo '<script>console.log("' . $error_message . '");</script>';
+    $message = "New user connot be created at this time, please try again.<br>Remember: Email address cannot be used for more than one account.";
+    include('../views/signup_view.php');
 }
 
