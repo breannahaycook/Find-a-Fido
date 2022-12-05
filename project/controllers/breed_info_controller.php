@@ -88,5 +88,6 @@ try {
     
 } catch (Exception $e) {
     $error_message = $e->getMessage();
-    include('../views/error.php');
+    echo '<script>console.log("' . $error_message . '");</script>';
+    include ('../views/dog_breed_view.php');
 }

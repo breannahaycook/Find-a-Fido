@@ -55,6 +55,10 @@
             .passwordAlign{
                 margin-right: 43%;
             }
+            
+            .message {
+                font-size: 13px;
+            }
 
             .nameAlign{
                 margin-right: 50%
@@ -106,19 +110,20 @@
         </style>
     </head>
     <?php
-    include('nav.php');
+        include('nav.php');
     ?>
     <body>
-
         <div class="loginContainer">
             <section class="createAccount">
                 <h1 class="loginh1">Login</h1>
-                <?php
-                // will display error message if unable to login
-                if (isset($message) && $message != " ") {
-                    echo $message;
-                }
-                ?>
+                <p class="message">
+                    <?php
+                        // will display error message if unable to login
+                        if (isset($message) && $message != " ") {
+                            echo $message . "<br>";
+                        }
+                    ?>
+                </p>
                 <br>
                 <form action="../controllers/login_controller.php" method="post">
                     <label class="emailAlign loginLabels" for="email">Email:</label><br>
@@ -131,11 +136,10 @@
                     <input class="button loginInput" type="submit" value="Login">
                 </form>
                 <p id="dontHaveAccount">Don't have an account? <a href="../views/signup_view.php">Sign up!</a></p>
-
             </section>
         </div>
     </body>
     <?php
-    include('footer.php');
+        include('footer.php');
     ?>
 </html>

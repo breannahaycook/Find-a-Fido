@@ -41,10 +41,9 @@
                 width: 500px;
                 text-align: center;
                 background-color: white;
-                padding: 30px 0;
+                padding: 15px 0;
                 border-radius: 70px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
-                ;
             }
 
             .emailAlign{
@@ -53,6 +52,10 @@
 
             .passwordAlign{
                 margin-right: 43%;
+            }
+            
+            .message {
+                font-size: 13px;
             }
 
             .nameAlign{
@@ -105,19 +108,21 @@
         </style>
     </head>
     <?php
-    include('nav.php');
+        include('nav.php');
     ?>
     <body>
         <div class="loginContainer">
             <section class="createAccount">
                 <h1 class="loginh1">Create Account</h1>
-                <?php
-                // will display error message if unable to create account
-                if (isset($message) && $message != " ") {
-                    echo $message;
-                }
-                ?>
-
+                <p class="message">
+                    <?php
+                        // will display error message if unable to create account
+                        if (isset($message) && $message != " ") {
+                            echo $message;
+                        }
+                    ?>
+                </p>
+                <br>
                 <form action="../controllers/signup_controller.php" method="post">
                     <label class="nameAlign loginLabels" for="name">Name:</label><br>
                     <input class="it loginInput" type="text" id="name" name="name" placeholder="Enter your name" required><br>
@@ -131,13 +136,11 @@
                     <input type="hidden" name="action" value="create_account">
                     <input class="button loginInput" type="submit" value="Submit">
                 </form>
-
                 <p id="alreadyHaveAccount">Already have an account? <a href="../views/login_view.php">Login!</a></p>      
-
             </section>
         </div>      
     </body>
     <?php
-    include('footer.php');
+        include('footer.php');
     ?>
 </html>

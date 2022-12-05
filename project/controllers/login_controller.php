@@ -40,9 +40,13 @@ try {
             }
         }
     }
+    
     include ('../views/login_view.php');
+    
 } catch (Exception $e) {
     $error_message = $e->getMessage();
-    include('../views/error.php');
+    echo '<script>console.log("' . $error_message . '");</script>';
+    $message = "User connot be logged in at this time, please try again.<br>";
+    include('../views/login_view.php');
 }
 
