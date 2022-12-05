@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+
 try {
     include ('../views/about_us_view.php');
 } catch (Exception $e) {

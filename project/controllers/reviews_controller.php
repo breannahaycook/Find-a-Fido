@@ -15,14 +15,16 @@ try {
     $id = htmlspecialchars(filter_input(INPUT_POST, "id"));
     
     // if filter is applied filter all reviews by $breed else it gets all reviews
-    if ($action === 'filter_reviews') {
+    if ($action === 'Filter Reviews') {
         $reviews = get_breed_reviews_by_name($breed);
+    } else if ($action === 'Clear Reviews') {
+        $reviews = get_all_breed_reviews();
     } else {
         $reviews = get_all_breed_reviews();
     }
     
     // creates a review object, creates review, and refreshes page
-    if($action === 'create_review') {
+    if ($action === 'create_review') {
         $new_review = new Review($_SESSION['id'], $breed, $review, '', 0);
         create_review($new_review); 
         

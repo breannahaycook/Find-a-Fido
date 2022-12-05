@@ -33,17 +33,6 @@
                 font-family: 'Fredoka One', sans-serif;
             }
 
-
-            /*            body__header{
-                            font-family: "Lato", sans-serif;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 1.7;
-                            color: #777;
-                            padding: 150px;
-                        }*/
-
-
             .header__section {
                 height: 94vh;
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.646),
@@ -51,15 +40,11 @@
                     url(../utility/assets/whiteDogsBG.jpeg);
                 background-repeat: no-repeat;
                 background-position: bottom;
-
-                /* clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); */
                 position: relative;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 1.7;
-
             }
-
 
             .header-text-box {
                 position: absolute;
@@ -84,8 +69,7 @@
                 animation-name: moveInLeft;
                 animation-duration: 2s;
                 animation-timing-function: ease-out;
-                font-family: 'Fredoka One', sans-serif;
-                
+                font-family: 'Fredoka One', sans-serif;   
             }
 
             .heading-primary-second {
@@ -95,7 +79,6 @@
                 letter-spacing: 17.4px;
                 font-family: 'Fredoka One', sans-serif;
                 animation: moveInRight 2s ease-out;
-
             }
 
             @keyframes moveInLeft {
@@ -111,7 +94,6 @@
                 100% {
                     opacity: 1;
                     transform: translate(0);
-
                 }
             }
 
@@ -128,7 +110,6 @@
                 100% {
                     opacity: 1;
                     transform: translate(0);
-
                 }
             }
 
@@ -143,19 +124,16 @@
                 color: #fff;
                 transition: all .1s;
                 font-family: 'Fredoka One', sans-serif;
-
             }
 
             .btn:hover {
                 transform: translateY(-3px);
                 box-shadow: 0 10px 20px black;
-
             }
 
             .btn:active {
                 transform: translateY(-1px);
                 box-shadow: 0 5px 10px black;
-
             }
 
             .btn-white {
@@ -169,7 +147,6 @@
                 height: 100%;
                 width: 100%;
                 border-radius: 100px;
-
             }
 
 
@@ -178,26 +155,24 @@
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.053),
                     rgba(0, 62, 128, 0.334)),
                     url(../utility/assets/whiteBonePawPrintsBG.jpg);
-
             }
+            
             .main-cointainer {
                 background-image: linear-gradient(to right bottom, rgba(0, 111, 230, 0.653),
                     rgba(0, 62, 128, 0.334)),
                     url();
-
                 display: flex;
                 justify-content: space-between;
                 gap: 50px;
                 padding: 3rem 10rem;
                 max-width: 1400px;
                 margin: 0 auto;
-
             }
+            
             .main-cointainer--form {
                 max-width: 800px;
                 text-align: left;
                 font-size: 20px;
-
             }
             
             .main-cointainer--form-one-p {
@@ -205,11 +180,10 @@
                 color: black;
                 line-height: 1.7;
                 font-family: 'Fredoka One', sans-serif;
-
             }
+            
             .main-cointainer--form-one-lbl{
-                font-family: 'Fredoka One', sans-serif;
-                
+                font-family: 'Fredoka One', sans-serif; 
             }
 
             .main-cointainer--reviews {
@@ -221,8 +195,6 @@
                 font-size: 15px;
                 box-shadow: 2px 2px 10px black;
                 height: 80%;
-                
-
             }
 
             .main-cointainer--reviews-one-img {
@@ -244,13 +216,12 @@
                 box-shadow: 2px 2px 10px black;
                 display: flex;
                 flex-direction: column;
-                
-
             }
+            
             .main-cointainer--form-one-chkbox {
                 margin-bottom: 20px;
-                
             }
+            
             .main-cointainer--form_btn {
                 display: flex;
                 justify-content: center;
@@ -258,7 +229,6 @@
             }
 
             .main-cointainer--form_btn-sb{
-
                 text-transform: uppercase;
                 text-decoration: none;
                 padding: 30px 90px;
@@ -271,20 +241,16 @@
                 font-family: 'Fredoka One', sans-serif;
             }
 
-
             .main-cointainer--form_btn-sb:hover {
                 transform: translateY(-3px);
                 box-shadow: 0 10px 20px black;
-
             }
 
             .main-cointainer--form_btn-sb:active {
                 transform: translateY(-1px);
                 box-shadow: 0 5px 10px black;
                 color: black;
-
             }
-
 
             .main-cointainer--form_btn-sb::after {
                 content: "";
@@ -293,18 +259,18 @@
                 width: 100%;
                 border-radius: 100px;
                 font-family: 'Fredoka One', sans-serif;
-
             }
+            
             .reviews-header{
                 margin-bottom: 20px;
                 font-family: 'Fredoka One', sans-serif;
             }
+            
             .reviews-p-first{
                 margin-bottom: 50px;
                 font-family: 'Fredoka One', sans-serif;
             }
-
-
+            
 
             /* -------section-activity------------- */
 
@@ -317,7 +283,6 @@
                 background-position: center;
                 max-width: 1400px;
                 margin: 0 auto;
-
             }
 
             .activity--container-main-greetings{
@@ -350,29 +315,23 @@
                 display: flex;
                 flex-direction: column;
                 height: 40%;
-
             }
 
             .activity--container-main-img{
                 width: 100%;
-                /* margin: 50px; */
-                padding: 50px;
+                padding: 10px;
                 margin: 0 auto;
             }
 
             .activity--container-main-h{
                 margin-bottom: 20px auto;
-                font-family: 'Fredoka One', sans-serif;
-                
-                
+                font-family: 'Fredoka One', sans-serif; 
             }
 
             .activity--container-main-p{
                 padding: 20px 55px;
                 font-family: 'Fredoka One', sans-serif;
             }
-
-
 
         </style>
 
@@ -407,25 +366,22 @@
                     <form class="main-cointainer--form-main-f" action="../controllers/results_controller.php" method="POST" >
 
                         <div class="main-cointainer--form-main-one">
-
                             <p class="main-cointainer--form-one-p">What size dog do you want?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="size" value="S" checked>
-                                <label class="main-cointainer--form-one-lbl" for="low">Small</label>
+                                <label class="main-cointainer--form-one-lbl" for="small">Small</label>
                             </div>
                             <div class="main-cointainer--form-one-chkbox">
-                                <input class="main-cointainer--form-one-chk" type="radio" name="size"
-                                       value="M" >
-                                <label class="main-cointainer--form-one-lbl" for="moderate">Medium</label><br>
+                                <input class="main-cointainer--form-one-chk" type="radio" name="size" value="M">
+                                <label class="main-cointainer--form-one-lbl" for="medium">Medium</label><br>
                             </div>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="size" value="L">
-                                <label class="main-cointainer--form-one-lbl" for="high">Large</label>
+                                <label class="main-cointainer--form-one-lbl" for="large">Large</label>
                             </div>
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-
                             <p class="main-cointainer--form-one-p">How much time can you put into training?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="training_level" value="Low" checked>
@@ -440,67 +396,50 @@
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="training_level" value="High">
                                 <label class="main-cointainer--form-one-lbl" for="high">High</label>
                             </div>
-
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-
                             <p class="main-cointainer--form-one-p">Are allergies an issue?</p>
                             <div class="main-cointainer--form-one-chkbox">
-
-                                <input class="main-cointainer--form-one-chk" type="radio"  name="hypoallergenic"
-                                       value="No" checked>
+                                <input class="main-cointainer--form-one-chk" type="radio"  name="hypoallergenic" value="No" checked>
                                 <label class="main-cointainer--form-one-lbl" for="no">No</label><br>
                             </div>
                             <div class="main-cointainer--form-one-chkbox">
-                                <input class="main-cointainer--form-one-chk" type="radio" name="hypoallergenic"
-                                       value="Yes">
-                                <label class="main-cointainer--form-one-lbl" for="yes">YES</label><br>
-
+                                <input class="main-cointainer--form-one-chk" type="radio" name="hypoallergenic" value="Yes">
+                                <label class="main-cointainer--form-one-lbl" for="yes">Yes</label><br>
                             </div>
-
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-
                             <p class="main-cointainer--form-one-p">How active are you?</p>
-
                             <div class="main-cointainer--form-one-chkbox">
-                                <input class="main-cointainer--form-one-chk" type="radio"  name="activity_level"
-                                       value="Very Active" checked>
-                                <label class="main-cointainer--form-one-lbl" for="sedantry">Sedentary</label><br>
+                                <input class="main-cointainer--form-one-chk" type="radio"  name="activity_level" value="Sedentary" checked>
+                                <label class="main-cointainer--form-one-lbl" for="sedentary">Sedentary</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="activity_level"
                                        value="Moderately Active">
                                 <label class="main-cointainer--form-one-lbl" for="moderate_active">Moderately
                                     Active</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="activity_level"
                                        value="Very Active">
                                 <label class="main-cointainer--form-one-lbl" for="very_active">Very Active</label>
                             </div>
-
-
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-                            <p class="main-cointainer--form-one-p">How much noise can you tolerate?</p>
-
+                            <p class="main-cointainer--form-one-p">What noise level are you looking for in a dog?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="noise_level" value="Quiet" checked>
-                                <label class="main-cointainer--form-one-lbl" for="quite">Quite</label><br>
+                                <label class="main-cointainer--form-one-lbl" for="quite">Quiet</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="noise_level"
                                        value="Medium">
                                 <label class="main-cointainer--form-one-lbl" for="medium">Medium</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="noise_level"
                                        value="Very Vocal" >
@@ -510,109 +449,84 @@
 
 
                         <div class="main-cointainer--form-main-one">
-                            <p class="main-cointainer--form-one-p">What is the temperament you want the dog to be at around kids?</p>
-
+                            <p class="main-cointainer--form-one-p">How important is the dogs temperament with children?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="kids_temp" value="Poor" checked>
-                                <label class="main-cointainer--form-one-lbl" for="poor">Poor</label><br>
+                                <label class="main-cointainer--form-one-lbl" for="poor">Not Important</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="kids_temp"
                                        value="Good">
-                                <label class="main-cointainer--form-one-lbl" for="good">Good</label><br>
+                                <label class="main-cointainer--form-one-lbl" for="good">Somewhat</label><br>
                             </div>
 
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="kids_temp" value="Great">
-                                <label class="main-cointainer--form-one-lbl" for="great">Great</label>
+                                <label class="main-cointainer--form-one-lbl" for="great">Very Important</label>
                             </div>
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-
-
                             <p class="main-cointainer--form-one-p">How much time can you dedicate to grooming?</p>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="grooming"
                                        value="Minimal" checked>
                                 <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="grooming"
                                        value="Moderate">
                                 <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="grooming" value="A Lot">
                                 <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
                             </div>
-
                         </div>
 
                         <div class="main-cointainer--form-main-one">
-
-                            <p class="main-cointainer--form-one-p">How large is your household?</p>
+                            <p class="main-cointainer--form-one-p">How much space do you have to share with a dog?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="household_size"
                                        value="Very Little" checked>
                                 <label class="main-cointainer--form-one-lbl" for="minimal">Very Little</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="household_size"
                                        value="A Little">
                                 <label class="main-cointainer--form-one-lbl" for="moderate">A Little</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="household_size" value="A Lot">
                                 <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
                             </div>
-
                         </div>
 
-
                         <div class="main-cointainer--form-main-one">
-
                             <p class="main-cointainer--form-one-p">How much hair can you tolerate?</p>
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio"  name="shedding"
                                        value="Minimal" checked>
                                 <label class="main-cointainer--form-one-lbl" for="minimal">Minimal</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio" name="shedding"
                                        value="Moderate">
                                 <label class="main-cointainer--form-one-lbl" for="moderate">Moderate</label><br>
                             </div>
-
                             <div class="main-cointainer--form-one-chkbox">
                                 <input class="main-cointainer--form-one-chk" type="radio" name="shedding" value="A Lot">
                                 <label class="main-cointainer--form-one-lbl" for="alot">A Lot</label>
                             </div>
-
                         </div>
-
 
                         <div class="main-cointainer--form_btn">
-
                             <button class="main-cointainer--form_btn-sb " type="submit">Submit Form</button>
-
                         </div>
-
-
-
+                        
                     </form>
 
-
-
                 </section>
-
 
                 <section class="main-cointainer--reviews">
 
@@ -621,14 +535,11 @@
 
                     <div class="main-cointainer--reviews-one">
 
-
                         <?php $counter = 0; ?>
-
 
                         <?php foreach ($reviews as $review) : ?>
 
                             <?php $breed_name = $review->get_breed(); ?>
-
 
                             <img class="main-cointainer--reviews-one-img" src="../utility/assets/<?php echo $breed_name; ?>.jpg" alt="Picture of a <?php echo $breed_name; ?>">
 
@@ -664,26 +575,26 @@
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/dog_breed.jpg" alt="picture of dog breed page">
+                        <img class="activity--container-main-img" src="../utility/assets/dog_breed_page.jpg" alt="picture of dog breed page">
                         <h1 class="activity--container-main-h">Dog Breed</h1>
                         <p class="activity--container-main-p">You can also select Breeds from our filter section to your desire needs!</p>
-                        <a href="../controllers/breed_info_controller.php" class="btn btn-white">Dog Breed.</a>
+                        <a href="../controllers/breed_info_controller.php" class="btn btn-white">Dog Breed</a>
 
                     </div>
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/dog__care.jpg" alt="picture of dog breed page">
+                        <img class="activity--container-main-img" src="../utility/assets/dog_care_page.jpg" alt="picture of dog breed page">
                         <h1 class="activity--container-main-h">Dog Care</h1>
                         <p class="activity--container-main-p">Concern about you Dog health we can help you find the local wets 
                             gromming, shredding and also to walk your dog around the park located next to your area.</p>
-                        <a href="../controllers/dog_care_controller.php" class="btn btn-white">Dog Care.</a>
+                        <a href="../controllers/dog_care_controller.php" class="btn btn-white">Dog Care</a>
 
                     </div>
 
                     <div class="activity--container-main-section-block">
 
-                        <img class="activity--container-main-img" src="../utility/assets/Golden Retriever.jpg" alt="picture of dog breed page">
+                        <img class="activity--container-main-img" src="../utility/assets/about_us_page.jpg" alt="picture of dog breed page">
                         <h1 class="activity--container-main-h">About US</h1>
                         <p class="activity--container-main-p">If you want to know a bit about the creator of the website. Click the link below!!!</p>
                         <a href="../controllers/about_us_controller.php" class="btn btn-white">About Us</a>

@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+
 try {
     include ('../views/dog_care_view.php');
 

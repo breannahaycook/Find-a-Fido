@@ -19,7 +19,7 @@
                 font-style: normal;
             }
             
-            .boneBackground{
+            .boneBackground {
                 background-image: url("../utility/assets/whiteBonePawPrintsBG.jpg");   
             }
             
@@ -54,6 +54,10 @@
             .dogBreedsTitle {
                 font-size: 60px;
             }
+            
+            form {
+                font-family: 'Roboto', sans-serif !important; 
+            }
 
             h1 {
                 color: rgb(60, 77, 156);
@@ -64,7 +68,12 @@
                 text-shadow: 0px 3px 2px rgb(201, 201, 201);
             }
             
+            h2 {
+                font-family: 'Roboto', sans-serif;
+            }
+            
             h4 {
+                font-family: 'Roboto', sans-serif;
                 color: rgb(60, 77, 156);
                 font-size: 17px;
             }
@@ -87,6 +96,7 @@
             }
 
             label {
+                font-family: 'Roboto', sans-serif;
                 font-size: 13px;
             }
 
@@ -104,7 +114,7 @@
 
             .para {
                 color: rgb(43, 60, 133);
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Roboto', sans-serif !important;
                 font-size: 20px;
                 font-style: normal;
                 margin: 30px;
@@ -136,7 +146,7 @@
             .sidenav {
                 background-color: #3A4B86;
                 color: #FFFFFF;
-                font-family: 'Fredoka', sans-serif;            
+                font-family: 'Fredoka', sans-serif;        
                 font-size: 16px;
                 grid-area: sideNav;
                 height: 1000px;
@@ -299,7 +309,6 @@
                             <section>
                                 <?php $breed_name = $breed_info-> get_breed(); ?>
                                 <h1><?php echo $breed_name ?></h1>
-
                                 <table>
                                     <tr>
                                         <td>

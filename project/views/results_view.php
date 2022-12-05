@@ -25,11 +25,11 @@
             font-style: normal;
         }
         
-        .boneBackground{
+        .boneBackground {
             background-image: url("../utility/assets/dogsBG.jpg");
         }
         
-        .button{
+        .button {
             background: linear-gradient(138deg, rgba(60,77,156,1) 0%, rgba(124,143,194,1) 75%, rgba(185,222,231,1) 100%);
             border: none;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(43, 60, 133, 0.301);
@@ -61,15 +61,16 @@
             text-align: center;
             text-shadow: 0px 3px 2px rgb(201, 201, 201);
         }
-
+        
         h4 {
+            font-family: 'Roboto', sans-serif;
             color: rgb(60, 77, 156);
             font-size: 17px;
         }
         
         h5 {
             color: rgb(43, 60, 133);
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif !important;
             font-size: 20px;
             font-style: normal;
             margin: 30px;
@@ -131,7 +132,6 @@
             font-family: 'Roboto', sans-serif;
             padding: 0 5rem;
             margin: 0 auto;
-            
         }
 
         table {
@@ -233,7 +233,6 @@
                                         <i id="sizeBone1" class='fas fa-bone checked'></i>
                                         <i id="sizeBone2" class='fas fa-bone <?php if ($activity_level == "Sedentary") { echo "not"; } ?>checked'></i>
                                         <i id="sizeBone3" class='fas fa-bone <?php if ($activity_level !== "Very Active") { echo "not"; } ?>checked'></i>
-
 
                                         <h4>Hypoallergenic?</h4>
                                         <?php $hypoallergenic = $breed_info-> get_hypoallergenic(); ?>
