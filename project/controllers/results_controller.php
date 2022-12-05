@@ -32,437 +32,88 @@ try {
         'Yorkshire Terrier' => 0
     ];
     
+    // get all breed information to match
+    $breeds = get_all_breeds();
     
-    if (!empty($size)) {
-        $breeds_size_statement = " WHERE size = \"$size\" ";
-        $breeds_size_array = filter_breeds($breeds_size_statement);
-        foreach ($breeds_size_array as $breed) :
-           $name = $breed->get_breed ();
-           switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-           }
-        endforeach;
-    }
-
-   if (!empty($training_level)) {
-        $statement = " WHERE training_level = \"$training_level\" ";
-        $breeds_training_level_array = filter_breeds($statement);
-        foreach ($breeds_training_level_array as $breed) :
-           $name = $breed->get_breed ();
-           switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
+    // matches user input with breed information
+    foreach ($breeds as $breed) :
+        $name = $breed->get_breed();
     
-    if (!empty($hypoallergenic)) {
-        $statement = " WHERE hypoallergenic = \"$hypoallergenic\" ";
-        $breeds_hypoallergenic_array = filter_breeds($statement);
-        foreach ($breeds_hypoallergenic_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
+        if ($breed->get_size() === $size) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_training_level() === $training_level) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_hypoallergenic() === $hypoallergenic) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_noise_level() === $noise_level) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_kids_temp() === $kids_temp) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_grooming() === $grooming) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_household_size() === $household_size) {
+            $results_array[$name]++;
+        }
+        
+        if ($breed->get_shedding() === $shedding) {
+            $results_array[$name]++;
+        }
+    endforeach;
 
-    if (!empty($activity_level)) {
-        $statement = " WHERE activity_level = \"$activity_level\" ";
-        $breeds_activity_level_array = filter_breeds($statement);
-        foreach ($breeds_activity_level_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-    if (!empty($noise_level)) {
-        $statement = " WHERE noise_level = \"$noise_level\" ";
-        $breeds_noise_level_array = filter_breeds($statement);
-        foreach ($breeds_noise_level_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-    if (!empty($kids_temp)) {
-        $statement = " WHERE kids_temp = \"$kids_temp\" ";
-        $breeds_kids_temp_array = filter_breeds($statement);
-        foreach ($breeds_kids_temp_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-    if (!empty($grooming)) {
-        $statement = " WHERE grooming = \"$grooming\" ";
-        $breeds_grooming_array = filter_breeds($statement);
-        foreach ($breeds_grooming_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-    if (!empty($household_size)) {
-        $statement = " WHERE household_size = \"$household_size\" ";
-        $breeds_household_size_array = filter_breeds($statement);
-        foreach ($breeds_household_size_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-                case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-    if (!empty($shedding)) {
-        $statement = " WHERE shedding = \"$shedding\" ";
-        $breeds_shedding_array = filter_breeds($statement);
-        foreach ($breeds_shedding_array as $breed) :
-            $name = $breed->get_breed ();
-            switch ($name) {
-               case 'Basset Hound':
-                   $results_array['Basset Hound']++;
-                   break;
-                case 'Bolognese':
-                   $results_array['Bolognese']++;
-                   break;
-                case 'Border Collie':
-                   $results_array['Border Collie']++;
-                   break;
-                case 'Chihuahua':
-                   $results_array['Chihuahua']++;
-                   break;
-                case 'Doberman Pinscher':
-                   $results_array['Doberman Pinscher']++;
-                   break;
-                case 'French Bulldog':
-                   $results_array['French Bulldog']++;
-                   break;
-                case 'Golden Retriever':
-                   $results_array['Golden Retriever']++;
-                   break;
-                case 'Irish Water Spaniel':
-                   $results_array['Irish Water Spaniel']++;
-                   break;
-                case 'Poodle':
-                   $results_array['Poodle']++;
-                   break;
-                case 'Siberian Husky':
-                   $results_array['Siberian Husky']++;
-                   break;
-                case 'Standard Schnauzer':
-                   $results_array['Standard Schnauzer']++;
-                   break;
-                case 'Yorkshire Terrier':
-                   $results_array['Yorkshire Terrier']++;
-                   break;
-            }
-        endforeach;
-    }
-
-        arsort($results_array);
-        $value = array_values($results_array)[0];
-        $breed_key = array_search(array_values($results_array)[0], $results_array);
-        $breed_obj = new Breed($breed_key, '', '', '', '', '', '', '', '', '', '', 0);
-        $results = get_breed_by_name($breed_obj);
+    // puts array in decending order
+    arsort($results_array);
     
-//    for ($i = 0; $i > sizeof($results_array); $i++ ){
-//        $j = $i++;
-//        if ($results_array[$j] != null) {
-//            if ($results_array[$i] != $$results_array[$j]) {
-//                break;
-//            } else {
-//                
-//            }
-//        }
-//    }
+    $dog = array_keys($results_array);
+        
+    // array for top matches
+    $results_key_array[0] = $dog[0];
+    
+    // checks if the first value matches the second
+    for ($i = 1; $i <= count($dog); $i++) {
+        // if value matches break and display only match
+        if ($results_array[$dog[0]] != $results_array[$dog[$i]]){
+            break;
+        } else {
+            // if there is more than one top number add to multi array
+           array_push($results_key_array, $dog[$i]);
+        }
+    }
+
+    // if there is more than one item in the $multi_array combine the WHERE statement then display results
+    if (count($results_key_array) != 1) {
+        $message = "Congratulations! You have " . count($results_key_array) . " top matches!";
+        $statement = " WHERE breed IN (";
+        
+        foreach ($results_key_array as $breed) :
+            $statement .= "\"$breed\", ";
+        endforeach;
+
+        $statement = rtrim($statement,", ");
+        $statement .= ")";
+        
+        $results = get_breeds_by_filter($statement);
+        
+    } else {
+        // display results for the top match
+        $message = "Congratulations! Here is your top match!";
+        
+        foreach ($results_key_array as $breed) :
+            $breed_obj = new Breed($breed, '', '', '', '', '', '', '', '', '', '', 0);
+            $results = get_breed_by_name($breed_obj);
+        endforeach;
+    }
 
     include ('../views/results_view.php');
     
