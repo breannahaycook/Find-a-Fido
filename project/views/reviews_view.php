@@ -16,11 +16,6 @@
                 text-decoration: none;   
             }
             
-            a:visited {
-                color: white;
-                text-decoration: none;
-            }
-            
             .aboutReviews {
                 text-align: center;
                 color: rgb(102, 102, 102);
@@ -194,6 +189,11 @@
                 margin: 5px;
             }
             
+            .top:visited {
+                color: white;
+                text-decoration: none;
+            }
+            
             .reviewPara {
                 color: rgb(43, 60, 133);
                 font-family: 'Roboto', sans-serif;
@@ -266,7 +266,7 @@
             </div>
             
             <div class="sidenav">
-                <button class="topButton"><a href="#top">Back to Top</a></button>
+                <button class="topButton"><a class="top" href="#top">Back to Top</a></button>
             </div>
             <?php if ($reviews !== []) {
                 foreach ($reviews as $review) : ?>
